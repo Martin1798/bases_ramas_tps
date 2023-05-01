@@ -69,7 +69,6 @@ typedef struct digital_output_s *digital_output_t;
 
 digital_output_t Digital_OutputCreate(uint8_t port,uint8_t pin);
 
-
 void DigitalOutPutActivate(digital_output_t output);
 
 void DigitalOutPutDesactivate(digital_output_t output);

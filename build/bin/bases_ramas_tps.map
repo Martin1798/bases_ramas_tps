@@ -91,12 +91,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/obj/src/digital.o
  .data          0x0000000000000000        0x0 build/obj/src/digital.o
  .bss           0x0000000000000000        0x0 build/obj/src/digital.o
- .text.Chip_GPIO_SetPinToggle
-                0x0000000000000000       0x32 build/obj/src/digital.o
- .text.DigitalOutPutActivate
-                0x0000000000000000       0x24 build/obj/src/digital.o
- .text.DigitalOutPutToggle
-                0x0000000000000000       0x24 build/obj/src/digital.o
  .group         0x0000000000000000        0xc build/obj/src/main.o
  .group         0x0000000000000000        0xc build/obj/src/main.o
  .group         0x0000000000000000        0xc build/obj/src/main.o
@@ -356,25 +350,25 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x000000001a000114                . = ALIGN (0x4)
                 0x000000001a000114                __section_table_start = .
                 0x000000001a000114                __data_section_table = .
-                0x000000001a000114        0x4 LONG 0x1a00083c LOADADDR (.data)
+                0x000000001a000114        0x4 LONG 0x1a0008b8 LOADADDR (.data)
                 0x000000001a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000001a00011c        0x4 LONG 0x0 SIZEOF (.data)
-                0x000000001a000120        0x4 LONG 0x1a00083c LOADADDR (.data_RAM2)
+                0x000000001a000120        0x4 LONG 0x1a0008b8 LOADADDR (.data_RAM2)
                 0x000000001a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x000000001a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x000000001a00012c        0x4 LONG 0x1a00083c LOADADDR (.data_RAM3)
+                0x000000001a00012c        0x4 LONG 0x1a0008b8 LOADADDR (.data_RAM3)
                 0x000000001a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x000000001a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x000000001a000138        0x4 LONG 0x1a00083c LOADADDR (.data_RAM4)
+                0x000000001a000138        0x4 LONG 0x1a0008b8 LOADADDR (.data_RAM4)
                 0x000000001a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x000000001a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x000000001a000144        0x4 LONG 0x1a00083c LOADADDR (.data_RAM5)
+                0x000000001a000144        0x4 LONG 0x1a0008b8 LOADADDR (.data_RAM5)
                 0x000000001a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x000000001a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x000000001a000150                __data_section_table_end = .
                 0x000000001a000150                __bss_section_table = .
                 0x000000001a000150        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000001a000154        0x4 LONG 0x4 SIZEOF (.bss)
+                0x000000001a000154        0x4 LONG 0xc SIZEOF (.bss)
                 0x000000001a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
                 0x000000001a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x000000001a000160        0x4 LONG 0x20000000 ADDR (.bss_RAM3)
@@ -474,7 +468,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
 .iplt           0x000000001a00023c        0x0
  .iplt          0x000000001a00023c        0x0 build/obj/src/digital.o
 
-.text           0x000000001a00023c      0x600
+.text           0x000000001a00023c      0x67c
  *(.text*)
  .text.Chip_GPIO_SetPinState
                 0x000000001a00023c       0x38 build/obj/src/digital.o
@@ -484,48 +478,57 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x000000001a0002b2       0x40 build/obj/src/digital.o
  .text.Chip_GPIO_SetPinDIR
                 0x000000001a0002f2       0x42 build/obj/src/digital.o
- .text.Digital_OutputCreate
-                0x000000001a000334       0x50 build/obj/src/digital.o
-                0x000000001a000334                Digital_OutputCreate
- .text.DigitalOutPutDesactivate
-                0x000000001a000384       0x24 build/obj/src/digital.o
-                0x000000001a000384                DigitalOutPutDesactivate
- .text.Chip_SCU_PinMuxSet
-                0x000000001a0003a8       0x34 build/obj/src/main.o
- .text.Chip_GPIO_SetPinState
-                0x000000001a0003dc       0x38 build/obj/src/main.o
- .text.Chip_GPIO_ReadPortBit
-                0x000000001a000414       0x34 build/obj/src/main.o
- .text.Chip_GPIO_SetPinDIROutput
-                0x000000001a000448       0x3e build/obj/src/main.o
- .text.Chip_GPIO_SetPinDIRInput
-                0x000000001a000486       0x40 build/obj/src/main.o
- .text.Chip_GPIO_SetPinDIR
-                0x000000001a0004c6       0x42 build/obj/src/main.o
  .text.Chip_GPIO_SetPinToggle
-                0x000000001a000508       0x32 build/obj/src/main.o
- *fill*         0x000000001a00053a        0x2 
- .text.main     0x000000001a00053c      0x220 build/obj/src/main.o
-                0x000000001a00053c                main
+                0x000000001a000334       0x32 build/obj/src/digital.o
+ *fill*         0x000000001a000366        0x2 
+ .text.DigitalOutputAllocate
+                0x000000001a000368       0x6c build/obj/src/digital.o
+                0x000000001a000368                DigitalOutputAllocate
+ .text.Digital_OutputCreate
+                0x000000001a0003d4       0x58 build/obj/src/digital.o
+                0x000000001a0003d4                Digital_OutputCreate
+ .text.DigitalOutPutActivate
+                0x000000001a00042c       0x24 build/obj/src/digital.o
+                0x000000001a00042c                DigitalOutPutActivate
+ .text.DigitalOutPutDesactivate
+                0x000000001a000450       0x24 build/obj/src/digital.o
+                0x000000001a000450                DigitalOutPutDesactivate
+ .text.DigitalOutPutToggle
+                0x000000001a000474       0x24 build/obj/src/digital.o
+                0x000000001a000474                DigitalOutPutToggle
+ .text.Chip_SCU_PinMuxSet
+                0x000000001a000498       0x34 build/obj/src/main.o
+ .text.Chip_GPIO_SetPinState
+                0x000000001a0004cc       0x38 build/obj/src/main.o
+ .text.Chip_GPIO_ReadPortBit
+                0x000000001a000504       0x34 build/obj/src/main.o
+ .text.Chip_GPIO_SetPinDIROutput
+                0x000000001a000538       0x3e build/obj/src/main.o
+ .text.Chip_GPIO_SetPinDIRInput
+                0x000000001a000576       0x40 build/obj/src/main.o
+ .text.Chip_GPIO_SetPinDIR
+                0x000000001a0005b6       0x42 build/obj/src/main.o
+ .text.main     0x000000001a0005f8      0x1e0 build/obj/src/main.o
+                0x000000001a0005f8                main
  .text.ResetISR
-                0x000000001a00075c       0xe0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
-                0x000000001a00075c                ResetISR
+                0x000000001a0007d8       0xe0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x000000001a0007d8                ResetISR
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x000000001a00083c                . = ALIGN (0x4)
+                0x000000001a0008b8                . = ALIGN (0x4)
 
-.rel.dyn        0x000000001a00083c        0x0
- .rel.iplt      0x000000001a00083c        0x0 build/obj/src/digital.o
+.rel.dyn        0x000000001a0008b8        0x0
+ .rel.iplt      0x000000001a0008b8        0x0 build/obj/src/digital.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000001a00083c                __exidx_start = .
+                0x000000001a0008b8                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000001a00083c                __exidx_end = .
-                0x000000001a00083c                _etext = .
+                0x000000001a0008b8                __exidx_end = .
+                0x000000001a0008b8                _etext = .
 
-.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a00083c
+.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a0008b8
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2 = .)
  *(.ramfunc.$RAM2)
@@ -536,7 +539,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010080000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM2 = .)
 
-.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a00083c
+.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a0008b8
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM3 = .)
  *(.ramfunc.$RAM3)
@@ -546,7 +549,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000020000000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM3 = .)
 
-.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a00083c
+.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a0008b8
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM4 = .)
  *(.ramfunc.$RAM4)
@@ -556,7 +559,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000020008000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM4 = .)
 
-.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a00083c
+.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a0008b8
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM5 = .)
  *(.ramfunc.$RAM5)
@@ -572,7 +575,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000        0x0 load address 0x000000001a00083c
+.data           0x0000000010000000        0x0 load address 0x000000001a0008b8
  FILL mask 0xff
                 0x0000000010000000                _data = .
  *(vtable)
@@ -581,7 +584,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _edata = .
 
-.igot.plt       0x0000000010000000        0x0 load address 0x000000001a00083c
+.igot.plt       0x0000000010000000        0x0 load address 0x000000001a0008b8
  .igot.plt      0x0000000010000000        0x0 build/obj/src/digital.o
 
 .bss_RAM2       0x0000000010080000        0x0
@@ -612,14 +615,14 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x000000002000c000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                        PROVIDE (__end_bss_RAM5 = .)
 
-.bss            0x0000000010000000        0x4
+.bss            0x0000000010000000        0xc
                 0x0000000010000000                _bss = .
  *(.bss*)
- .bss.output.0  0x0000000010000000        0x2 build/obj/src/digital.o
+ .bss.instances.0
+                0x0000000010000000        0xc build/obj/src/digital.o
  *(COMMON)
-                0x0000000010000004                . = ALIGN (0x4)
- *fill*         0x0000000010000002        0x2 
-                0x0000000010000004                _ebss = .
+                0x000000001000000c                . = ALIGN (0x4)
+                0x000000001000000c                _ebss = .
                 [!provide]                        PROVIDE (end = .)
 
 .noinit_RAM2    0x0000000010080000        0x0
@@ -642,14 +645,14 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
  *(.noinit.$RamAHB_ETB16*)
                 0x000000002000c000                . = ALIGN (0x4)
 
-.noinit         0x0000000010000004        0x0
-                0x0000000010000004                _noinit = .
+.noinit         0x000000001000000c        0x0
+                0x000000001000000c                _noinit = .
  *(.noinit*)
-                0x0000000010000004                . = ALIGN (0x4)
-                0x0000000010000004                _end_noinit = .
+                0x000000001000000c                . = ALIGN (0x4)
+                0x000000001000000c                _end_noinit = .
                 [!provide]                        PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x0000000010008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
-                0xffffffff53ff6e8a                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0xffffffff53ff6e0e                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(build/bin/bases_ramas_tps.elf elf32-littlearm)
 LOAD linker stubs
 
@@ -670,27 +673,27 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a build/obj/src/main.o
  .comment       0x0000000000000049       0x4a build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_info     0x0000000000000000      0xca1
- .debug_info    0x0000000000000000      0x402 build/obj/src/digital.o
- .debug_info    0x0000000000000402      0x5c6 build/obj/src/main.o
- .debug_info    0x00000000000009c8      0x2d9 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_info     0x0000000000000000      0xcf5
+ .debug_info    0x0000000000000000      0x471 build/obj/src/digital.o
+ .debug_info    0x0000000000000471      0x5ab build/obj/src/main.o
+ .debug_info    0x0000000000000a1c      0x2d9 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_abbrev   0x0000000000000000      0x4a1
- .debug_abbrev  0x0000000000000000      0x1b7 build/obj/src/digital.o
- .debug_abbrev  0x00000000000001b7      0x1bf build/obj/src/main.o
- .debug_abbrev  0x0000000000000376      0x12b build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_abbrev   0x0000000000000000      0x48c
+ .debug_abbrev  0x0000000000000000      0x1de build/obj/src/digital.o
+ .debug_abbrev  0x00000000000001de      0x183 build/obj/src/main.o
+ .debug_abbrev  0x0000000000000361      0x12b build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 .debug_aranges  0x0000000000000000      0x138
  .debug_aranges
-                0x0000000000000000       0x60 build/obj/src/digital.o
+                0x0000000000000000       0x68 build/obj/src/digital.o
  .debug_aranges
-                0x0000000000000060       0x58 build/obj/src/main.o
+                0x0000000000000068       0x50 build/obj/src/main.o
  .debug_aranges
                 0x00000000000000b8       0x80 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 .debug_ranges   0x0000000000000000      0x108
- .debug_ranges  0x0000000000000000       0x50 build/obj/src/digital.o
- .debug_ranges  0x0000000000000050       0x48 build/obj/src/main.o
+ .debug_ranges  0x0000000000000000       0x58 build/obj/src/digital.o
+ .debug_ranges  0x0000000000000058       0x40 build/obj/src/main.o
  .debug_ranges  0x0000000000000098       0x70 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 .debug_macro    0x0000000000000000     0x51c4
@@ -754,22 +757,22 @@ LOAD linker stubs
  .debug_macro   0x0000000000004e7e      0x329 build/obj/src/main.o
  .debug_macro   0x00000000000051a7       0x1d build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_line     0x0000000000000000     0x15af
- .debug_line    0x0000000000000000      0x97c build/obj/src/digital.o
- .debug_line    0x000000000000097c      0xa0d build/obj/src/main.o
- .debug_line    0x0000000000001389      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_line     0x0000000000000000     0x15dd
+ .debug_line    0x0000000000000000      0x9c4 build/obj/src/digital.o
+ .debug_line    0x00000000000009c4      0x9f3 build/obj/src/main.o
+ .debug_line    0x00000000000013b7      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_str      0x0000000000000000    0x170ea
- .debug_str     0x0000000000000000    0x16d2a build/obj/src/digital.o
-                                      0x16eff (size before relaxing)
- .debug_str     0x0000000000016d2a      0x132 build/obj/src/main.o
-                                      0x16f90 (size before relaxing)
- .debug_str     0x0000000000016e5c      0x28e build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_str      0x0000000000000000    0x17133
+ .debug_str     0x0000000000000000    0x16d5a build/obj/src/digital.o
+                                      0x16f2f (size before relaxing)
+ .debug_str     0x0000000000016d5a      0x14b build/obj/src/main.o
+                                      0x16f98 (size before relaxing)
+ .debug_str     0x0000000000016ea5      0x28e build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
                                        0x2fc2 (size before relaxing)
 
 .debug_frame    0x0000000000000000      0x418
- .debug_frame   0x0000000000000000      0x164 build/obj/src/digital.o
- .debug_frame   0x0000000000000164      0x144 build/obj/src/main.o
+ .debug_frame   0x0000000000000000      0x18c build/obj/src/digital.o
+ .debug_frame   0x000000000000018c      0x11c build/obj/src/main.o
  .debug_frame   0x00000000000002a8      0x170 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 Cross Reference Table
@@ -785,9 +788,12 @@ DAC_IRQHandler                                    build/obj/external/base/soc/lp
 DMA_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 DebugMon_Handler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 DigitalOutPutActivate                             build/obj/src/digital.o
+                                                  build/obj/src/main.o
 DigitalOutPutDesactivate                          build/obj/src/digital.o
                                                   build/obj/src/main.o
 DigitalOutPutToggle                               build/obj/src/digital.o
+                                                  build/obj/src/main.o
+DigitalOutputAllocate                             build/obj/src/digital.o
 Digital_OutputCreate                              build/obj/src/digital.o
                                                   build/obj/src/main.o
 ETH_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
