@@ -2,20 +2,32 @@
 #include "digital.h"
 #include <stdbool.h>
 
-typedef struct digital_output_s{
-uint8_t port;
-uint8_t pin;
-bool allocated;
+typedef struct digital_output_s {
+    uint8_t port;
+    uint8_t pin;
+    bool allocated;
 } *digital_output_t;
+
+
+typedef struct digital_input_s{
+    uint8_t port;
+    uint8_t pin;
+    bool allocated;
+} *digital_input_t;
+
+
+
+
+
 
 digital_output_t DigitalOutputAllocate(void);
 
 digital_output_t DigitalOutputAllocate(void){
     digital_output_t output =NULL;
 
-    static struct digital_output_s instances[4]={0};
+    static struct digital_output_s instances[NUMERO_GPIO_OUT]={0};
 
-    for(int index=0;index<4;index++){
+    for(int index=0;index<NUMERO_GPIO_OUT;index++){
         if(!instances[index].allocated){
             instances[index].allocated=true;
             output=&instances[index];
@@ -25,6 +37,41 @@ digital_output_t DigitalOutputAllocate(void){
 
 return output;
 }
+
+digital_input_t DigitalinputAllocate(void){
+    digital_input_t input =NULL;
+
+    static struct digital_input_s instances[NUMERO_GPIO_INPUT]={0};
+
+    for(int index=0;index<NUMERO_GPIO_INPUT;index++){
+        if(!instances[index].allocated){
+            instances[index].allocated=true;
+            input=&instances[index];
+            break;
+        }
+    }
+
+return input;
+}
+
+
+digital_input_t  DigitalInputCreate(uint8_t port,uint8_t pin){
+
+digital_input_t input=DigitalinputAllocate();
+
+if(input){
+input->port=port;
+input->pin=pin;
+
+Chip_GPIO_SetPinDIR(LPC_GPIO_PORT,input->port,input->pin, false);
+  
+}
+return input;
+}
+
+
+
+
 
 
 digital_output_t Digital_OutputCreate(uint8_t port,uint8_t pin){
@@ -41,6 +88,8 @@ output->pin=pin;
 return output;
 }
 
+
+
 void DigitalOutPutActivate(digital_output_t output){
     Chip_GPIO_SetPinState(LPC_GPIO_PORT,output->port,output->pin,true);
 }
@@ -50,5 +99,9 @@ void DigitalOutPutDesactivate(digital_output_t output){
 }
 
 void DigitalOutPutToggle(digital_output_t output){
-Chip_GPIO_SetPinToggle(LPC_GPIO_PORT,output->port,output->pin);
+    Chip_GPIO_SetPinToggle(LPC_GPIO_PORT,output->port,output->pin);
+}
+
+int DigitalInputState(digital_input_t input){
+   return Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, input->port, input->pin);
 }
