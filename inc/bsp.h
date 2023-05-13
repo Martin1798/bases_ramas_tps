@@ -64,7 +64,7 @@
 #define TEC_4_BIT 9
 
 
-
+/// @brief estos son las entradas y salidas de los cuales se usaran en el programa
 typedef struct board_s{
 
     digital_output_t led_azul;
@@ -80,6 +80,8 @@ typedef struct board_s{
 }const* const board_t;
 
 
-
+/// @brief crea un board
+/// @param  
+/// @return 
 board_t BoardCreate(void);
 
