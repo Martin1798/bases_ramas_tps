@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "chip.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "nuevo archivo de texto": "c"
     }
 }

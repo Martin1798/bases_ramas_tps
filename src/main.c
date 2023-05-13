@@ -42,7 +42,9 @@
 
 #include "chip.h"
 #include "digital.h"
+#include "bsp.h"
 #include <stdbool.h>
+
 
 /* === Macros definitions ====================================================================== */
 
@@ -62,76 +64,38 @@
 
 int main(void) {
 
-    digital_output_t led_azul;
-    digital_output_t led_rojo;
-    digital_output_t led_amarillo;
-    digital_output_t led_verde;
 
-    digital_input_t tecla_1;
-    digital_input_t tecla_2;
-    digital_input_t tecla_3;
-    digital_input_t tecla_4;
 
     int divisor = 0;
 
-    Chip_SCU_PinMuxSet(LED_R_PORT, LED_R_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_R_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_R_GPIO, LED_R_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_R_GPIO, LED_R_BIT, true);
-
-    Chip_SCU_PinMuxSet(LED_G_PORT, LED_G_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_G_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_G_GPIO, LED_G_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_G_GPIO, LED_G_BIT, true);
-
-    Chip_SCU_PinMuxSet(LED_B_PORT, LED_B_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_B_FUNC);
-    led_azul=Digital_OutputCreate(LED_B_GPIO, LED_B_BIT);
-    /******************/
-    Chip_SCU_PinMuxSet(LED_1_PORT, LED_1_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_1_FUNC);
-    led_amarillo=Digital_OutputCreate(LED_1_GPIO, LED_1_BIT);
-
-    Chip_SCU_PinMuxSet(LED_2_PORT, LED_2_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_2_FUNC);
-    led_rojo=Digital_OutputCreate(LED_2_GPIO, LED_2_BIT);
-
-    Chip_SCU_PinMuxSet(LED_3_PORT, LED_3_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_3_FUNC);
-    led_verde=Digital_OutputCreate(LED_3_GPIO,LED_3_BIT);
-    /******************/
-    Chip_SCU_PinMuxSet(TEC_1_PORT, TEC_1_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_1_FUNC);
-    tecla_1=DigitalInputCreate(TEC_1_GPIO,invertir_logica,TEC_1_BIT);
-
-    Chip_SCU_PinMuxSet(TEC_2_PORT, TEC_2_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_2_FUNC);
-    tecla_2=DigitalInputCreate(TEC_2_GPIO,invertir_logica, TEC_2_BIT);
-
-    Chip_SCU_PinMuxSet(TEC_3_PORT, TEC_3_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_3_FUNC);
-    tecla_3=DigitalInputCreate(TEC_3_GPIO,invertir_logica, TEC_3_BIT);
-
-    Chip_SCU_PinMuxSet(TEC_4_PORT, TEC_4_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_4_FUNC);
-    tecla_4=DigitalInputCreate(TEC_4_GPIO,invertir_logica,TEC_4_BIT);
+    board_t board = BoardCreate();
 
     while (true) {
-        if (DigitalInputState(tecla_1)) {
-            DigitalOutPutActivate(led_azul);
+        if (DigitalInputState(board->tecla_1)) {
+            DigitalOutPutActivate(board->led_azul);
         } else {
-            DigitalOutPutDesactivate(led_azul);
+            DigitalOutPutDesactivate(board->led_azul);
         }
 
-        if (DigitalInputhasActivated(tecla_2)) {
-            DigitalOutPutToggle(led_amarillo);
+        if (DigitalInputhasActivated(board->tecla_2)) {
+            DigitalOutPutToggle(board->led_amarillo);
         }
         
 
-        if (DigitalInputState(tecla_3)) {
-            DigitalOutPutActivate(led_rojo);
+        if (DigitalInputState(board->tecla_3)) {
+            DigitalOutPutActivate(board->led_rojo);
         }
-        if (DigitalInputState(tecla_4)) {
-            DigitalOutPutDesactivate(led_rojo);
+        if (DigitalInputState(board->tecla_4)) {
+            DigitalOutPutDesactivate(board->led_rojo);
         }
 
         divisor++;
         if (divisor == 100) {
             divisor = 0;
 
-            if (DigitalInputState(tecla_4)) {//lo pongo asi porque me molesta el que el led parpadee todo el tiempo
-                DigitalOutPutToggle(led_verde);
-            } else {DigitalOutPutDesactivate(led_verde);}
+            if (DigitalInputState(board->tecla_4)) {//lo pongo asi porque me molesta el que el led parpadee todo el tiempo
+                DigitalOutPutToggle(board->led_verde);
+            } else {DigitalOutPutDesactivate(board->led_verde);}
         }
 
         for (int index = 0; index < 1000; index++) {

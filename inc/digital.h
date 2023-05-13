@@ -1,4 +1,5 @@
-
+#include <stdbool.h>
+#include <stdint.h>
 
 #ifndef NUMERO_GPIO_OUT
 #define NUMERO_GPIO_OUT 4
