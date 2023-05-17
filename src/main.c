@@ -42,6 +42,7 @@
 
 #include "chip.h"
 #include "digital.h"
+#include "poncho.h"
 #include "bsp.h"
 #include <stdbool.h>
 
@@ -71,46 +72,39 @@ int main(void) {
     board_t board = BoardCreate();
 
     while (true) {
-
+        DigitalOutPutActivate(board->Dig_1);
 
         if(DigitalInputState(board->F1)){
             DigitalOutPutActivate(board->Seg_D);
-            DigitalOutPutActivate(board->Dig_2);
+            
+        }
+        if(DigitalInputState(board->F2)){
+            DigitalOutPutActivate(board->Seg_E);
+            
+        }
+        if(DigitalInputState(board->F3)){
+            DigitalOutPutActivate(board->Seg_F);
+            
+        }
+        if(DigitalInputState(board->F4)){
+            DigitalOutPutActivate(board->Seg_G);
+            
         }
 
-        /*
-        if (DigitalInputState(board->tecla_1)) {
-            DigitalOutPutActivate(board->led_azul);
-        } else {
-            DigitalOutPutDesactivate(board->led_azul);
+
+        if(DigitalInputState(board->Aceptar)){
+            DigitalOutPutActivate(board->Seg_A);
+            
+        }
+        if(DigitalInputState(board->Cancelar)){
+            DigitalOutPutDesactivate(board->Seg_D);
+            DigitalOutPutDesactivate(board->Seg_E);
+            DigitalOutPutDesactivate(board->Seg_F);
+            DigitalOutPutDesactivate(board->Seg_G);
+            DigitalOutPutDesactivate(board->Seg_A);
+            
         }
 
-        if (DigitalInputhasActivated(board->tecla_2)) {
-            DigitalOutPutToggle(board->led_amarillo);
-        }
-        
-
-        if (DigitalInputState(board->tecla_3)) {
-            DigitalOutPutActivate(board->led_rojo);
-        }
-        if (DigitalInputState(board->tecla_4)) {
-            DigitalOutPutDesactivate(board->led_rojo);
-        }
-
-        divisor++;
-        if (divisor == 100) {
-            divisor = 0;
-
-            if (DigitalInputState(board->tecla_4)) {//lo pongo asi porque me molesta el que el led parpadee todo el tiempo
-                DigitalOutPutToggle(board->led_verde);
-            } else {DigitalOutPutDesactivate(board->led_verde);}
-        }
-
-        for (int index = 0; index < 1000; index++) {
-            for (int delay = 0; delay < 25; delay++ ) {
-                __asm("NOP");
-            }
-        }*/
     }
 }
 

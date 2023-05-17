@@ -1,13 +1,9 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#ifndef NUMERO_GPIO_OUT
-#define NUMERO_GPIO_OUT 4
-#endif
+#define numero_entradas 6
+#define numero_salidas  14
 
-#ifndef NUMERO_GPIO_INPUT
-#define NUMERO_GPIO_INPUT 4
-#endif
 
 #ifndef invertir_logica
 #define invertir_logica 1

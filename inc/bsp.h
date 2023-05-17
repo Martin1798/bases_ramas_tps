@@ -10,7 +10,7 @@ typedef struct board_s{
 
     digital_output_t Seg_A,Seg_B,Seg_C,Seg_D,Seg_E,Seg_F,Seg_G;
 
-    //digital_output_t Dp_1,Dp_2,Dp_3,Dp_4;
+    digital_output_t Punto;
 
     digital_output_t Dig_1,Dig_2,Dig_3,Dig_4;
 
@@ -20,6 +20,8 @@ typedef struct board_s{
     digital_output_t led_rojo;
     digital_output_t led_amarillo;
     digital_output_t led_verde;
+    digital_output_t led_rojo_rgb;
+    digital_output_t led_verde_rgb;
 
     digital_input_t tecla_1;
     digital_input_t tecla_2;

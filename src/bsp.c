@@ -30,6 +30,9 @@ board_t BoardCreate(void){
 
     Chip_SCU_PinMuxSet(SEGMENT_G_PORT, SEGMENT_G_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | SEGMENT_G_FUNC);
     board.Seg_G=Digital_OutputCreate(SEGMENT_G_GPIO, SEGMENT_G_BIT);
+
+    Chip_SCU_PinMuxSet(SEGMENT_P_PORT, SEGMENT_P_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | SEGMENT_P_FUNC);
+    board.Punto=Digital_OutputCreate(SEGMENT_P_GPIO, SEGMENT_P_BIT);
     /******************/
 
     Chip_SCU_PinMuxSet(DIGIT_1_PORT, DIGIT_1_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | DIGIT_1_FUNC);
@@ -77,6 +80,12 @@ board_t BoardCreate(void){
 
     Chip_SCU_PinMuxSet(LED_3_PORT, LED_3_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_3_FUNC);
     board.led_verde=Digital_OutputCreate(LED_3_GPIO,LED_3_BIT);
+
+    Chip_SCU_PinMuxSet(LED_RR_PORT, LED_RR_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_RR_FUNC);
+    board.led_rojo_rgb=Digital_OutputCreate(LED_RR_GPIO,LED_RR_BIT);
+
+    Chip_SCU_PinMuxSet(LED_GG_PORT, LED_GG_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_GG_FUNC);
+    board.led_verde_rgb=Digital_OutputCreate(LED_GG_GPIO,LED_GG_BIT);
     /******************/
     Chip_SCU_PinMuxSet(TEC_1_PORT, TEC_1_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_1_FUNC);
     board.tecla_1=DigitalInputCreate(TEC_1_GPIO,invertir_logica,TEC_1_BIT);

@@ -209,6 +209,18 @@ extern "C" {
 #define LED_B_GPIO 5
 #define LED_B_BIT 2
 
+#define LED_RR_PORT 2
+#define LED_RR_PIN 0
+#define LED_RR_FUNC SCU_MODE_FUNC4
+#define LED_RR_GPIO 5
+#define LED_RR_BIT 0
+
+#define LED_GG_PORT 2
+#define LED_GG_PIN 1
+#define LED_GG_FUNC SCU_MODE_FUNC4
+#define LED_GG_GPIO 5
+#define LED_GG_BIT 1
+
 #define LED_1_PORT 2
 #define LED_1_PIN 10
 #define LED_1_FUNC SCU_MODE_FUNC0
