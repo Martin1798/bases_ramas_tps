@@ -66,11 +66,19 @@ int main(void) {
 
 
 
-    int divisor = 0;
+    //int divisor = 0;
 
     board_t board = BoardCreate();
 
     while (true) {
+
+
+        if(DigitalInputState(board->F1)){
+            DigitalOutPutActivate(board->Seg_D);
+            DigitalOutPutActivate(board->Dig_2);
+        }
+
+        /*
         if (DigitalInputState(board->tecla_1)) {
             DigitalOutPutActivate(board->led_azul);
         } else {
@@ -102,7 +110,7 @@ int main(void) {
             for (int delay = 0; delay < 25; delay++ ) {
                 __asm("NOP");
             }
-        }
+        }*/
     }
 }
 

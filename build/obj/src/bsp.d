@@ -64,4 +64,5 @@ build/obj/src/bsp.o: \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/muju/external/base/soc/lpc43xx/lpc_open/inc/error.h \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/muju/external/base/soc/lpc43xx/lpc_open/inc/i2cm_18xx_43xx.h \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/muju/external/base/soc/lpc43xx/lpc_open/inc/fpu_init.h \
- /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/digital.h
+ /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/digital.h \
+ /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/poncho.h

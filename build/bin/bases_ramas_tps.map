@@ -151,8 +151,16 @@ Discarded input sections
  .text          0x0000000000000000        0x0 build/obj/src/digital.o
  .data          0x0000000000000000        0x0 build/obj/src/digital.o
  .bss           0x0000000000000000        0x0 build/obj/src/digital.o
+ .text.Chip_GPIO_SetPinToggle
+                0x0000000000000000       0x32 build/obj/src/digital.o
+ .text.DigitalOutPutDesactivate
+                0x0000000000000000       0x24 build/obj/src/digital.o
+ .text.DigitalOutPutToggle
+                0x0000000000000000       0x24 build/obj/src/digital.o
  .text.DigitalInputhasChanged
                 0x0000000000000000       0x32 build/obj/src/digital.o
+ .text.DigitalInputhasActivated
+                0x0000000000000000       0x46 build/obj/src/digital.o
  .text.DigitalInputhasDesactivated
                 0x0000000000000000       0x4c build/obj/src/digital.o
  .debug_macro   0x0000000000000000      0xaba build/obj/src/digital.o
@@ -327,7 +335,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
  .debug_macro   0x0000000000000000       0x40 build/obj/src/main.o
  .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
- .debug_macro   0x0000000000000000      0x130 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x42f build/obj/src/main.o
  .group         0x0000000000000000        0xc build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
  .text          0x0000000000000000        0x0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
  .data          0x0000000000000000        0x0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
@@ -473,25 +481,25 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x000000001a000114                . = ALIGN (0x4)
                 0x000000001a000114                __section_table_start = .
                 0x000000001a000114                __data_section_table = .
-                0x000000001a000114        0x4 LONG 0x1a000a1c LOADADDR (.data)
+                0x000000001a000114        0x4 LONG 0x1a00090c LOADADDR (.data)
                 0x000000001a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000001a00011c        0x4 LONG 0x0 SIZEOF (.data)
-                0x000000001a000120        0x4 LONG 0x1a000a1c LOADADDR (.data_RAM2)
+                0x000000001a000120        0x4 LONG 0x1a00090c LOADADDR (.data_RAM2)
                 0x000000001a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x000000001a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x000000001a00012c        0x4 LONG 0x1a000a1c LOADADDR (.data_RAM3)
+                0x000000001a00012c        0x4 LONG 0x1a00090c LOADADDR (.data_RAM3)
                 0x000000001a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x000000001a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x000000001a000138        0x4 LONG 0x1a000a1c LOADADDR (.data_RAM4)
+                0x000000001a000138        0x4 LONG 0x1a00090c LOADADDR (.data_RAM4)
                 0x000000001a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x000000001a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x000000001a000144        0x4 LONG 0x1a000a1c LOADADDR (.data_RAM5)
+                0x000000001a000144        0x4 LONG 0x1a00090c LOADADDR (.data_RAM5)
                 0x000000001a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x000000001a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x000000001a000150                __data_section_table_end = .
                 0x000000001a000150                __bss_section_table = .
                 0x000000001a000150        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000001a000154        0x4 LONG 0x40 SIZEOF (.bss)
+                0x000000001a000154        0x4 LONG 0x84 SIZEOF (.bss)
                 0x000000001a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
                 0x000000001a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x000000001a000160        0x4 LONG 0x20000000 ADDR (.bss_RAM3)
@@ -591,83 +599,63 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
 .iplt           0x000000001a00023c        0x0
  .iplt          0x000000001a00023c        0x0 build/obj/src/bsp.o
 
-.text           0x000000001a00023c      0x7e0
+.text           0x000000001a00023c      0x6d0
  *(.text*)
  .text.Chip_SCU_PinMuxSet
                 0x000000001a00023c       0x34 build/obj/src/bsp.o
- .text.Chip_GPIO_SetPinState
-                0x000000001a000270       0x38 build/obj/src/bsp.o
- .text.Chip_GPIO_SetPinDIROutput
-                0x000000001a0002a8       0x3e build/obj/src/bsp.o
- .text.Chip_GPIO_SetPinDIRInput
-                0x000000001a0002e6       0x40 build/obj/src/bsp.o
- .text.Chip_GPIO_SetPinDIR
-                0x000000001a000326       0x42 build/obj/src/bsp.o
  .text.BoardCreate
-                0x000000001a000368      0x120 build/obj/src/bsp.o
-                0x000000001a000368                BoardCreate
+                0x000000001a000270      0x27c build/obj/src/bsp.o
+                0x000000001a000270                BoardCreate
  .text.Chip_GPIO_SetPinState
-                0x000000001a000488       0x38 build/obj/src/digital.o
+                0x000000001a0004ec       0x38 build/obj/src/digital.o
  .text.Chip_GPIO_ReadPortBit
-                0x000000001a0004c0       0x34 build/obj/src/digital.o
+                0x000000001a000524       0x34 build/obj/src/digital.o
  .text.Chip_GPIO_SetPinDIROutput
-                0x000000001a0004f4       0x3e build/obj/src/digital.o
+                0x000000001a000558       0x3e build/obj/src/digital.o
  .text.Chip_GPIO_SetPinDIRInput
-                0x000000001a000532       0x40 build/obj/src/digital.o
+                0x000000001a000596       0x40 build/obj/src/digital.o
  .text.Chip_GPIO_SetPinDIR
-                0x000000001a000572       0x42 build/obj/src/digital.o
- .text.Chip_GPIO_SetPinToggle
-                0x000000001a0005b4       0x32 build/obj/src/digital.o
- *fill*         0x000000001a0005e6        0x2 
+                0x000000001a0005d6       0x42 build/obj/src/digital.o
  .text.DigitalOutputAllocate
-                0x000000001a0005e8       0x6c build/obj/src/digital.o
-                0x000000001a0005e8                DigitalOutputAllocate
+                0x000000001a000618       0x6c build/obj/src/digital.o
+                0x000000001a000618                DigitalOutputAllocate
  .text.DigitalinputAllocate
-                0x000000001a000654       0x6c build/obj/src/digital.o
-                0x000000001a000654                DigitalinputAllocate
+                0x000000001a000684       0x6c build/obj/src/digital.o
+                0x000000001a000684                DigitalinputAllocate
  .text.DigitalInputCreate
-                0x000000001a0006c0       0x50 build/obj/src/digital.o
-                0x000000001a0006c0                DigitalInputCreate
+                0x000000001a0006f0       0x50 build/obj/src/digital.o
+                0x000000001a0006f0                DigitalInputCreate
  .text.Digital_OutputCreate
-                0x000000001a000710       0x58 build/obj/src/digital.o
-                0x000000001a000710                Digital_OutputCreate
+                0x000000001a000740       0x58 build/obj/src/digital.o
+                0x000000001a000740                Digital_OutputCreate
  .text.DigitalOutPutActivate
-                0x000000001a000768       0x24 build/obj/src/digital.o
-                0x000000001a000768                DigitalOutPutActivate
- .text.DigitalOutPutDesactivate
-                0x000000001a00078c       0x24 build/obj/src/digital.o
-                0x000000001a00078c                DigitalOutPutDesactivate
- .text.DigitalOutPutToggle
-                0x000000001a0007b0       0x24 build/obj/src/digital.o
-                0x000000001a0007b0                DigitalOutPutToggle
+                0x000000001a000798       0x24 build/obj/src/digital.o
+                0x000000001a000798                DigitalOutPutActivate
  .text.DigitalInputState
-                0x000000001a0007d4       0x3c build/obj/src/digital.o
-                0x000000001a0007d4                DigitalInputState
- .text.DigitalInputhasActivated
-                0x000000001a000810       0x46 build/obj/src/digital.o
-                0x000000001a000810                DigitalInputhasActivated
- .text.main     0x000000001a000856       0xe4 build/obj/src/main.o
-                0x000000001a000856                main
- *fill*         0x000000001a00093a        0x2 
+                0x000000001a0007bc       0x3c build/obj/src/digital.o
+                0x000000001a0007bc                DigitalInputState
+ .text.main     0x000000001a0007f8       0x32 build/obj/src/main.o
+                0x000000001a0007f8                main
+ *fill*         0x000000001a00082a        0x2 
  .text.ResetISR
-                0x000000001a00093c       0xe0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
-                0x000000001a00093c                ResetISR
+                0x000000001a00082c       0xe0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x000000001a00082c                ResetISR
  *(.rodata .rodata.* .constdata .constdata.*)
-                0x000000001a000a1c                . = ALIGN (0x4)
+                0x000000001a00090c                . = ALIGN (0x4)
 
-.rel.dyn        0x000000001a000a1c        0x0
- .rel.iplt      0x000000001a000a1c        0x0 build/obj/src/bsp.o
+.rel.dyn        0x000000001a00090c        0x0
+ .rel.iplt      0x000000001a00090c        0x0 build/obj/src/bsp.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000001a000a1c                __exidx_start = .
+                0x000000001a00090c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000001a000a1c                __exidx_end = .
-                0x000000001a000a1c                _etext = .
+                0x000000001a00090c                __exidx_end = .
+                0x000000001a00090c                _etext = .
 
-.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a000a1c
+.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a00090c
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2 = .)
  *(.ramfunc.$RAM2)
@@ -678,7 +666,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010080000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM2 = .)
 
-.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a000a1c
+.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a00090c
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM3 = .)
  *(.ramfunc.$RAM3)
@@ -688,7 +676,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000020000000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM3 = .)
 
-.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a000a1c
+.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a00090c
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM4 = .)
  *(.ramfunc.$RAM4)
@@ -698,7 +686,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000020008000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM4 = .)
 
-.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a000a1c
+.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a00090c
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM5 = .)
  *(.ramfunc.$RAM5)
@@ -714,7 +702,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000        0x0 load address 0x000000001a000a1c
+.data           0x0000000010000000        0x0 load address 0x000000001a00090c
  FILL mask 0xff
                 0x0000000010000000                _data = .
  *(vtable)
@@ -723,7 +711,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _edata = .
 
-.igot.plt       0x0000000010000000        0x0 load address 0x000000001a000a1c
+.igot.plt       0x0000000010000000        0x0 load address 0x000000001a00090c
  .igot.plt      0x0000000010000000        0x0 build/obj/src/bsp.o
 
 .bss_RAM2       0x0000000010080000        0x0
@@ -754,17 +742,17 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x000000002000c000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                        PROVIDE (__end_bss_RAM5 = .)
 
-.bss            0x0000000010000000       0x40
+.bss            0x0000000010000000       0x84
                 0x0000000010000000                _bss = .
  *(.bss*)
- .bss.board     0x0000000010000000       0x20 build/obj/src/bsp.o
+ .bss.board     0x0000000010000000       0x64 build/obj/src/bsp.o
  .bss.instances.1
-                0x0000000010000020        0xc build/obj/src/digital.o
+                0x0000000010000064        0xc build/obj/src/digital.o
  .bss.instances.0
-                0x000000001000002c       0x14 build/obj/src/digital.o
+                0x0000000010000070       0x14 build/obj/src/digital.o
  *(COMMON)
-                0x0000000010000040                . = ALIGN (0x4)
-                0x0000000010000040                _ebss = .
+                0x0000000010000084                . = ALIGN (0x4)
+                0x0000000010000084                _ebss = .
                 [!provide]                        PROVIDE (end = .)
 
 .noinit_RAM2    0x0000000010080000        0x0
@@ -787,14 +775,14 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
  *(.noinit.$RamAHB_ETB16*)
                 0x000000002000c000                . = ALIGN (0x4)
 
-.noinit         0x0000000010000040        0x0
-                0x0000000010000040                _noinit = .
+.noinit         0x0000000010000084        0x0
+                0x0000000010000084                _noinit = .
  *(.noinit*)
-                0x0000000010000040                . = ALIGN (0x4)
-                0x0000000010000040                _end_noinit = .
+                0x0000000010000084                . = ALIGN (0x4)
+                0x0000000010000084                _end_noinit = .
                 [!provide]                        PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x0000000010008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
-                0xffffffff53ff6caa                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0xffffffff53ff6dba                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(build/bin/bases_ramas_tps.elf elf32-littlearm)
 LOAD linker stubs
 
@@ -818,118 +806,118 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a build/obj/src/main.o
  .comment       0x0000000000000049       0x4a build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_info     0x0000000000000000     0x1578
- .debug_info    0x0000000000000000      0xa22 build/obj/src/bsp.o
- .debug_info    0x0000000000000a22      0x6d8 build/obj/src/digital.o
- .debug_info    0x00000000000010fa      0x1a5 build/obj/src/main.o
- .debug_info    0x000000000000129f      0x2d9 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_info     0x0000000000000000     0x14d5
+ .debug_info    0x0000000000000000      0x8e7 build/obj/src/bsp.o
+ .debug_info    0x00000000000008e7      0x6d8 build/obj/src/digital.o
+ .debug_info    0x0000000000000fbf      0x23d build/obj/src/main.o
+ .debug_info    0x00000000000011fc      0x2d9 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_abbrev   0x0000000000000000      0x579
- .debug_abbrev  0x0000000000000000      0x1a7 build/obj/src/bsp.o
- .debug_abbrev  0x00000000000001a7      0x1fa build/obj/src/digital.o
- .debug_abbrev  0x00000000000003a1       0xad build/obj/src/main.o
- .debug_abbrev  0x000000000000044e      0x12b build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_abbrev   0x0000000000000000      0x53c
+ .debug_abbrev  0x0000000000000000      0x162 build/obj/src/bsp.o
+ .debug_abbrev  0x0000000000000162      0x1fa build/obj/src/digital.o
+ .debug_abbrev  0x000000000000035c       0xb5 build/obj/src/main.o
+ .debug_abbrev  0x0000000000000411      0x12b build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_aranges  0x0000000000000000      0x188
+.debug_aranges  0x0000000000000000      0x168
  .debug_aranges
-                0x0000000000000000       0x48 build/obj/src/bsp.o
+                0x0000000000000000       0x28 build/obj/src/bsp.o
  .debug_aranges
-                0x0000000000000048       0xa0 build/obj/src/digital.o
+                0x0000000000000028       0xa0 build/obj/src/digital.o
  .debug_aranges
-                0x00000000000000e8       0x20 build/obj/src/main.o
+                0x00000000000000c8       0x20 build/obj/src/main.o
  .debug_aranges
-                0x0000000000000108       0x80 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x00000000000000e8       0x80 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_ranges   0x0000000000000000      0x148
- .debug_ranges  0x0000000000000000       0x38 build/obj/src/bsp.o
- .debug_ranges  0x0000000000000038       0x90 build/obj/src/digital.o
- .debug_ranges  0x00000000000000c8       0x10 build/obj/src/main.o
- .debug_ranges  0x00000000000000d8       0x70 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_ranges   0x0000000000000000      0x128
+ .debug_ranges  0x0000000000000000       0x18 build/obj/src/bsp.o
+ .debug_ranges  0x0000000000000018       0x90 build/obj/src/digital.o
+ .debug_ranges  0x00000000000000a8       0x10 build/obj/src/main.o
+ .debug_ranges  0x00000000000000b8       0x70 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_macro    0x0000000000000000     0x551f
- .debug_macro   0x0000000000000000      0x332 build/obj/src/bsp.o
- .debug_macro   0x0000000000000332      0xaba build/obj/src/bsp.o
- .debug_macro   0x0000000000000dec       0x10 build/obj/src/bsp.o
- .debug_macro   0x0000000000000dfc       0x22 build/obj/src/bsp.o
- .debug_macro   0x0000000000000e1e       0x8e build/obj/src/bsp.o
- .debug_macro   0x0000000000000eac       0x51 build/obj/src/bsp.o
- .debug_macro   0x0000000000000efd      0x103 build/obj/src/bsp.o
- .debug_macro   0x0000000000001000       0x6a build/obj/src/bsp.o
- .debug_macro   0x000000000000106a      0x1df build/obj/src/bsp.o
- .debug_macro   0x0000000000001249       0x22 build/obj/src/bsp.o
- .debug_macro   0x000000000000126b       0x73 build/obj/src/bsp.o
- .debug_macro   0x00000000000012de       0x28 build/obj/src/bsp.o
- .debug_macro   0x0000000000001306       0x1c build/obj/src/bsp.o
- .debug_macro   0x0000000000001322       0x22 build/obj/src/bsp.o
- .debug_macro   0x0000000000001344       0xfb build/obj/src/bsp.o
- .debug_macro   0x000000000000143f     0x1011 build/obj/src/bsp.o
- .debug_macro   0x0000000000002450      0x11f build/obj/src/bsp.o
- .debug_macro   0x000000000000256f      0x2c3 build/obj/src/bsp.o
- .debug_macro   0x0000000000002832      0x112 build/obj/src/bsp.o
- .debug_macro   0x0000000000002944       0x11 build/obj/src/bsp.o
- .debug_macro   0x0000000000002955       0x2a build/obj/src/bsp.o
- .debug_macro   0x000000000000297f       0x16 build/obj/src/bsp.o
- .debug_macro   0x0000000000002995      0x2e6 build/obj/src/bsp.o
- .debug_macro   0x0000000000002c7b       0x82 build/obj/src/bsp.o
- .debug_macro   0x0000000000002cfd      0x13d build/obj/src/bsp.o
- .debug_macro   0x0000000000002e3a      0x198 build/obj/src/bsp.o
- .debug_macro   0x0000000000002fd2       0x34 build/obj/src/bsp.o
- .debug_macro   0x0000000000003006       0x58 build/obj/src/bsp.o
- .debug_macro   0x000000000000305e      0x236 build/obj/src/bsp.o
- .debug_macro   0x0000000000003294      0x572 build/obj/src/bsp.o
- .debug_macro   0x0000000000003806       0x16 build/obj/src/bsp.o
- .debug_macro   0x000000000000381c      0x18a build/obj/src/bsp.o
- .debug_macro   0x00000000000039a6       0x88 build/obj/src/bsp.o
- .debug_macro   0x0000000000003a2e      0x1b9 build/obj/src/bsp.o
- .debug_macro   0x0000000000003be7      0x1da build/obj/src/bsp.o
- .debug_macro   0x0000000000003dc1       0x40 build/obj/src/bsp.o
- .debug_macro   0x0000000000003e01       0x1c build/obj/src/bsp.o
- .debug_macro   0x0000000000003e1d       0x2e build/obj/src/bsp.o
- .debug_macro   0x0000000000003e4b       0x2e build/obj/src/bsp.o
- .debug_macro   0x0000000000003e79       0x22 build/obj/src/bsp.o
- .debug_macro   0x0000000000003e9b      0x201 build/obj/src/bsp.o
- .debug_macro   0x000000000000409c       0xe0 build/obj/src/bsp.o
- .debug_macro   0x000000000000417c      0x34c build/obj/src/bsp.o
- .debug_macro   0x00000000000044c8       0xdc build/obj/src/bsp.o
- .debug_macro   0x00000000000045a4       0xc4 build/obj/src/bsp.o
- .debug_macro   0x0000000000004668       0x8f build/obj/src/bsp.o
- .debug_macro   0x00000000000046f7       0x94 build/obj/src/bsp.o
- .debug_macro   0x000000000000478b       0xb8 build/obj/src/bsp.o
- .debug_macro   0x0000000000004843       0x4c build/obj/src/bsp.o
- .debug_macro   0x000000000000488f       0x16 build/obj/src/bsp.o
- .debug_macro   0x00000000000048a5      0x328 build/obj/src/bsp.o
- .debug_macro   0x0000000000004bcd       0x3a build/obj/src/bsp.o
- .debug_macro   0x0000000000004c07       0xd0 build/obj/src/bsp.o
- .debug_macro   0x0000000000004cd7       0x18 build/obj/src/bsp.o
- .debug_macro   0x0000000000004cef       0x22 build/obj/src/bsp.o
- .debug_macro   0x0000000000004d11       0x40 build/obj/src/bsp.o
- .debug_macro   0x0000000000004d51       0x22 build/obj/src/bsp.o
- .debug_macro   0x0000000000004d73      0x130 build/obj/src/bsp.o
- .debug_macro   0x0000000000004ea3      0x329 build/obj/src/digital.o
- .debug_macro   0x00000000000051cc      0x336 build/obj/src/main.o
- .debug_macro   0x0000000000005502       0x1d build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_macro    0x0000000000000000     0x5826
+ .debug_macro   0x0000000000000000      0x336 build/obj/src/bsp.o
+ .debug_macro   0x0000000000000336      0xaba build/obj/src/bsp.o
+ .debug_macro   0x0000000000000df0       0x10 build/obj/src/bsp.o
+ .debug_macro   0x0000000000000e00       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000000e22       0x8e build/obj/src/bsp.o
+ .debug_macro   0x0000000000000eb0       0x51 build/obj/src/bsp.o
+ .debug_macro   0x0000000000000f01      0x103 build/obj/src/bsp.o
+ .debug_macro   0x0000000000001004       0x6a build/obj/src/bsp.o
+ .debug_macro   0x000000000000106e      0x1df build/obj/src/bsp.o
+ .debug_macro   0x000000000000124d       0x22 build/obj/src/bsp.o
+ .debug_macro   0x000000000000126f       0x73 build/obj/src/bsp.o
+ .debug_macro   0x00000000000012e2       0x28 build/obj/src/bsp.o
+ .debug_macro   0x000000000000130a       0x1c build/obj/src/bsp.o
+ .debug_macro   0x0000000000001326       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000001348       0xfb build/obj/src/bsp.o
+ .debug_macro   0x0000000000001443     0x1011 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002454      0x11f build/obj/src/bsp.o
+ .debug_macro   0x0000000000002573      0x2c3 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002836      0x112 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002948       0x11 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002959       0x2a build/obj/src/bsp.o
+ .debug_macro   0x0000000000002983       0x16 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002999      0x2e6 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002c7f       0x82 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002d01      0x13d build/obj/src/bsp.o
+ .debug_macro   0x0000000000002e3e      0x198 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002fd6       0x34 build/obj/src/bsp.o
+ .debug_macro   0x000000000000300a       0x58 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003062      0x236 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003298      0x572 build/obj/src/bsp.o
+ .debug_macro   0x000000000000380a       0x16 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003820      0x18a build/obj/src/bsp.o
+ .debug_macro   0x00000000000039aa       0x88 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003a32      0x1b9 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003beb      0x1da build/obj/src/bsp.o
+ .debug_macro   0x0000000000003dc5       0x40 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e05       0x1c build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e21       0x2e build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e4f       0x2e build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e7d       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e9f      0x201 build/obj/src/bsp.o
+ .debug_macro   0x00000000000040a0       0xe0 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004180      0x34c build/obj/src/bsp.o
+ .debug_macro   0x00000000000044cc       0xdc build/obj/src/bsp.o
+ .debug_macro   0x00000000000045a8       0xc4 build/obj/src/bsp.o
+ .debug_macro   0x000000000000466c       0x8f build/obj/src/bsp.o
+ .debug_macro   0x00000000000046fb       0x94 build/obj/src/bsp.o
+ .debug_macro   0x000000000000478f       0xb8 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004847       0x4c build/obj/src/bsp.o
+ .debug_macro   0x0000000000004893       0x16 build/obj/src/bsp.o
+ .debug_macro   0x00000000000048a9      0x328 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004bd1       0x3a build/obj/src/bsp.o
+ .debug_macro   0x0000000000004c0b       0xd0 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004cdb       0x18 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004cf3       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004d15       0x40 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004d55       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004d77      0x42f build/obj/src/bsp.o
+ .debug_macro   0x00000000000051a6      0x329 build/obj/src/digital.o
+ .debug_macro   0x00000000000054cf      0x33a build/obj/src/main.o
+ .debug_macro   0x0000000000005809       0x1d build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_line     0x0000000000000000     0x1feb
- .debug_line    0x0000000000000000      0x97f build/obj/src/bsp.o
- .debug_line    0x000000000000097f      0xb4c build/obj/src/digital.o
- .debug_line    0x00000000000014cb      0x8fa build/obj/src/main.o
- .debug_line    0x0000000000001dc5      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_line     0x0000000000000000     0x1fb5
+ .debug_line    0x0000000000000000      0x99b build/obj/src/bsp.o
+ .debug_line    0x000000000000099b      0xb4c build/obj/src/digital.o
+ .debug_line    0x00000000000014e7      0x8a8 build/obj/src/main.o
+ .debug_line    0x0000000000001d8f      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_str      0x0000000000000000    0x17cd2
- .debug_str     0x0000000000000000    0x1782c build/obj/src/bsp.o
-                                      0x17a0a (size before relaxing)
- .debug_str     0x000000000001782c      0x1ae build/obj/src/digital.o
+.debug_str      0x0000000000000000    0x186c4
+ .debug_str     0x0000000000000000    0x181aa build/obj/src/bsp.o
+                                      0x18383 (size before relaxing)
+ .debug_str     0x00000000000181aa      0x230 build/obj/src/digital.o
                                       0x16d61 (size before relaxing)
- .debug_str     0x00000000000179da       0x6a build/obj/src/main.o
-                                      0x16ec0 (size before relaxing)
- .debug_str     0x0000000000017a44      0x28e build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_str     0x00000000000183da       0x5c build/obj/src/main.o
+                                      0x178ac (size before relaxing)
+ .debug_str     0x0000000000018436      0x28e build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
                                        0x2fc2 (size before relaxing)
 
-.debug_frame    0x0000000000000000      0x524
- .debug_frame   0x0000000000000000       0xf0 build/obj/src/bsp.o
- .debug_frame   0x00000000000000f0      0x294 build/obj/src/digital.o
- .debug_frame   0x0000000000000384       0x30 build/obj/src/main.o
- .debug_frame   0x00000000000003b4      0x170 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+.debug_frame    0x0000000000000000      0x488
+ .debug_frame   0x0000000000000000       0x54 build/obj/src/bsp.o
+ .debug_frame   0x0000000000000054      0x294 build/obj/src/digital.o
+ .debug_frame   0x00000000000002e8       0x30 build/obj/src/main.o
+ .debug_frame   0x0000000000000318      0x170 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 Cross Reference Table
 
@@ -950,15 +938,12 @@ DigitalInputCreate                                build/obj/src/digital.o
 DigitalInputState                                 build/obj/src/digital.o
                                                   build/obj/src/main.o
 DigitalInputhasActivated                          build/obj/src/digital.o
-                                                  build/obj/src/main.o
 DigitalInputhasChanged                            build/obj/src/digital.o
 DigitalInputhasDesactivated                       build/obj/src/digital.o
 DigitalOutPutActivate                             build/obj/src/digital.o
                                                   build/obj/src/main.o
 DigitalOutPutDesactivate                          build/obj/src/digital.o
-                                                  build/obj/src/main.o
 DigitalOutPutToggle                               build/obj/src/digital.o
-                                                  build/obj/src/main.o
 DigitalOutputAllocate                             build/obj/src/digital.o
 Digital_OutputCreate                              build/obj/src/digital.o
                                                   build/obj/src/bsp.o
