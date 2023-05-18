@@ -1,4 +1,5 @@
 #include "chip.h"
+#include "pantalla.h"
 #include "digital.h"
 #include <stdbool.h>
 #include "poncho.h"
@@ -15,6 +16,8 @@ typedef struct board_s{
     digital_output_t Dig_1,Dig_2,Dig_3,Dig_4;
 
     digital_input_t Aceptar,Cancelar,F1,F2,F3,F4;
+
+    display_t display;
     ////////////
     digital_output_t led_azul;
     digital_output_t led_rojo;

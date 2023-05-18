@@ -67,46 +67,61 @@ int main(void) {
 
 
 
-    //int divisor = 0;
+    
 
     board_t board = BoardCreate();
 
     while (true) {
-        DigitalOutPutActivate(board->Dig_1);
 
+    DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
+    
         if(DigitalInputState(board->F1)){
-            DigitalOutPutActivate(board->Seg_D);
+            DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
             
         }
         if(DigitalInputState(board->F2)){
-            DigitalOutPutActivate(board->Seg_E);
-            
-        }
-        if(DigitalInputState(board->F3)){
-            DigitalOutPutActivate(board->Seg_F);
-            
-        }
-        if(DigitalInputState(board->F4)){
-            DigitalOutPutActivate(board->Seg_G);
+            DisplayWriteBCD(board->display,NULL,0);
+
             
         }
 
+        for(int index=0;index < 1000 ; index++){
+            for(int delay=0;delay < 24 ; delay++){
+                __asm("NOP");
+             }
+        }
 
         if(DigitalInputState(board->Aceptar)){
-            DigitalOutPutActivate(board->Seg_A);
-            
-        }
-        if(DigitalInputState(board->Cancelar)){
-            DigitalOutPutDesactivate(board->Seg_D);
-            DigitalOutPutDesactivate(board->Seg_E);
-            DigitalOutPutDesactivate(board->Seg_F);
-            DigitalOutPutDesactivate(board->Seg_G);
-            DigitalOutPutDesactivate(board->Seg_A);
-            
-        }
+                DigitalOutPutActivate(board->Dig_1);
+                DigitalOutPutActivate(board->Dig_2);
+                DigitalOutPutActivate(board->Dig_3);
+                DigitalOutPutActivate(board->Dig_4);
+                DigitalOutPutActivate(board->Seg_A);
+                DigitalOutPutActivate(board->Seg_B);
+                DigitalOutPutActivate(board->Seg_C);
+                DigitalOutPutActivate(board->Seg_D);
+                DigitalOutPutActivate(board->Seg_E);
+                DigitalOutPutActivate(board->Seg_F);
+                DigitalOutPutActivate(board->Seg_G);
+                DigitalOutPutActivate(board->Punto);}
 
+        if(DigitalInputState(board->Cancelar)){
+                DigitalOutPutDesactivate(board->Dig_1);
+                DigitalOutPutDesactivate(board->Dig_2);
+                DigitalOutPutDesactivate(board->Dig_3);
+                DigitalOutPutDesactivate(board->Dig_4);
+                DigitalOutPutDesactivate(board->Seg_A);
+                DigitalOutPutDesactivate(board->Seg_B);
+                DigitalOutPutDesactivate(board->Seg_C);
+                DigitalOutPutDesactivate(board->Seg_D);
+                DigitalOutPutDesactivate(board->Seg_E);
+                DigitalOutPutDesactivate(board->Seg_F);
+                DigitalOutPutDesactivate(board->Seg_G);
+                DigitalOutPutDesactivate(board->Punto);}
+        
     }
 }
+
 
 /* === End of documentation ==================================================================== */
 

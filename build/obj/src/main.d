@@ -66,5 +66,6 @@ build/obj/src/main.o: \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/digital.h \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/poncho.h \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/bsp.h \
+ /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/pantalla.h \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/digital.h \
  /home/estudiante/Desktop/LABMICRO/Laboratorio-micro/bases_ramas_tps/inc/poncho.h

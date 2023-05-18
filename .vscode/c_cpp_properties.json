@@ -5,7 +5,8 @@
             "includePath": [
                 "${default}",
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/inc"
+                "${workspaceFolder}/inc",
+                "${workspaceFolder}/muju/external/base/soc/lpc43xx/lpc_open/inc"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
