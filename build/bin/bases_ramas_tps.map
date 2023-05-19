@@ -520,25 +520,25 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x000000001a000114                . = ALIGN (0x4)
                 0x000000001a000114                __section_table_start = .
                 0x000000001a000114                __data_section_table = .
-                0x000000001a000114        0x4 LONG 0x1a000d40 LOADADDR (.data)
+                0x000000001a000114        0x4 LONG 0x1a000cc0 LOADADDR (.data)
                 0x000000001a000118        0x4 LONG 0x10000000 ADDR (.data)
                 0x000000001a00011c        0x4 LONG 0x0 SIZEOF (.data)
-                0x000000001a000120        0x4 LONG 0x1a000d40 LOADADDR (.data_RAM2)
+                0x000000001a000120        0x4 LONG 0x1a000cc0 LOADADDR (.data_RAM2)
                 0x000000001a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
                 0x000000001a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x000000001a00012c        0x4 LONG 0x1a000d40 LOADADDR (.data_RAM3)
+                0x000000001a00012c        0x4 LONG 0x1a000cc0 LOADADDR (.data_RAM3)
                 0x000000001a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
                 0x000000001a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
-                0x000000001a000138        0x4 LONG 0x1a000d40 LOADADDR (.data_RAM4)
+                0x000000001a000138        0x4 LONG 0x1a000cc0 LOADADDR (.data_RAM4)
                 0x000000001a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
                 0x000000001a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
-                0x000000001a000144        0x4 LONG 0x1a000d40 LOADADDR (.data_RAM5)
+                0x000000001a000144        0x4 LONG 0x1a000cc0 LOADADDR (.data_RAM5)
                 0x000000001a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
                 0x000000001a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
                 0x000000001a000150                __data_section_table_end = .
                 0x000000001a000150                __bss_section_table = .
                 0x000000001a000150        0x4 LONG 0x10000000 ADDR (.bss)
-                0x000000001a000154        0x4 LONG 0xd8 SIZEOF (.bss)
+                0x000000001a000154        0x4 LONG 0xd4 SIZEOF (.bss)
                 0x000000001a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
                 0x000000001a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
                 0x000000001a000160        0x4 LONG 0x20000000 ADDR (.bss_RAM3)
@@ -638,7 +638,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
 .iplt           0x000000001a00023c        0x0
  .iplt          0x000000001a00023c        0x0 build/obj/src/bsp.o
 
-.text           0x000000001a00023c      0xb04
+.text           0x000000001a00023c      0xa84
  *(.text*)
  .text.Chip_SCU_PinMuxSet
                 0x000000001a00023c       0x34 build/obj/src/bsp.o
@@ -691,43 +691,45 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
  .text.DigitalInputState
                 0x000000001a00096c       0x3c build/obj/src/digital.o
                 0x000000001a00096c                DigitalInputState
- .text.main     0x000000001a0009a8      0x1a4 build/obj/src/main.o
+ .text.main     0x000000001a0009a8       0xf8 build/obj/src/main.o
                 0x000000001a0009a8                main
+ .text.delay    0x000000001a000aa0       0x2c build/obj/src/main.o
+                0x000000001a000aa0                delay
  .text.Display_Allocate
-                0x000000001a000b4c       0x14 build/obj/src/pantalla.o
+                0x000000001a000acc       0x14 build/obj/src/pantalla.o
  .text.DisplayCreate
-                0x000000001a000b60       0x54 build/obj/src/pantalla.o
-                0x000000001a000b60                DisplayCreate
+                0x000000001a000ae0       0x54 build/obj/src/pantalla.o
+                0x000000001a000ae0                DisplayCreate
  .text.DisplayWriteBCD
-                0x000000001a000bb4       0x68 build/obj/src/pantalla.o
-                0x000000001a000bb4                DisplayWriteBCD
+                0x000000001a000b34       0x68 build/obj/src/pantalla.o
+                0x000000001a000b34                DisplayWriteBCD
  .text.ResetISR
-                0x000000001a000c1c       0xe0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
-                0x000000001a000c1c                ResetISR
- .text.memcpy   0x000000001a000cfc       0x1c /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
-                0x000000001a000cfc                memcpy
- .text.memset   0x000000001a000d18       0x10 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
-                0x000000001a000d18                memset
+                0x000000001a000b9c       0xe0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x000000001a000b9c                ResetISR
+ .text.memcpy   0x000000001a000c7c       0x1c /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000001a000c7c                memcpy
+ .text.memset   0x000000001a000c98       0x10 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+                0x000000001a000c98                memset
  *(.rodata .rodata.* .constdata .constdata.*)
- .rodata        0x000000001a000d28        0xc build/obj/src/bsp.o
- .rodata        0x000000001a000d34        0x4 build/obj/src/main.o
+ .rodata        0x000000001a000ca8        0xc build/obj/src/bsp.o
+ .rodata        0x000000001a000cb4        0x4 build/obj/src/main.o
  .rodata.IMAGES
-                0x000000001a000d38        0x8 build/obj/src/pantalla.o
-                0x000000001a000d40                . = ALIGN (0x4)
+                0x000000001a000cb8        0x8 build/obj/src/pantalla.o
+                0x000000001a000cc0                . = ALIGN (0x4)
 
-.rel.dyn        0x000000001a000d40        0x0
- .rel.iplt      0x000000001a000d40        0x0 build/obj/src/bsp.o
+.rel.dyn        0x000000001a000cc0        0x0
+ .rel.iplt      0x000000001a000cc0        0x0 build/obj/src/bsp.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000001a000d40                __exidx_start = .
+                0x000000001a000cc0                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000001a000d40                __exidx_end = .
-                0x000000001a000d40                _etext = .
+                0x000000001a000cc0                __exidx_end = .
+                0x000000001a000cc0                _etext = .
 
-.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a000d40
+.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a000cc0
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2 = .)
  *(.ramfunc.$RAM2)
@@ -738,7 +740,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010080000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM2 = .)
 
-.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a000d40
+.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a000cc0
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM3 = .)
  *(.ramfunc.$RAM3)
@@ -748,7 +750,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000020000000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM3 = .)
 
-.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a000d40
+.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a000cc0
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM4 = .)
  *(.ramfunc.$RAM4)
@@ -758,7 +760,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000020008000                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__end_data_RAM4 = .)
 
-.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a000d40
+.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a000cc0
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM5 = .)
  *(.ramfunc.$RAM5)
@@ -774,7 +776,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000        0x0 load address 0x000000001a000d40
+.data           0x0000000010000000        0x0 load address 0x000000001a000cc0
  FILL mask 0xff
                 0x0000000010000000                _data = .
  *(vtable)
@@ -783,7 +785,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _edata = .
 
-.igot.plt       0x0000000010000000        0x0 load address 0x000000001a000d40
+.igot.plt       0x0000000010000000        0x0 load address 0x000000001a000cc0
  .igot.plt      0x0000000010000000        0x0 build/obj/src/bsp.o
 
 .bss_RAM2       0x0000000010080000        0x0
@@ -814,7 +816,7 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x000000002000c000                . = ALIGN ((. != 0x0)?0x4:0x1)
                 [!provide]                        PROVIDE (__end_bss_RAM5 = .)
 
-.bss            0x0000000010000000       0xd8
+.bss            0x0000000010000000       0xd4
                 0x0000000010000000                _bss = .
  *(.bss*)
  .bss.board     0x0000000010000000       0x74 build/obj/src/bsp.o
@@ -825,10 +827,10 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
                 0x00000000100000a0       0x1e build/obj/src/digital.o
  *fill*         0x00000000100000be        0x2 
  .bss.instances.0
-                0x00000000100000c0       0x18 build/obj/src/pantalla.o
+                0x00000000100000c0       0x14 build/obj/src/pantalla.o
  *(COMMON)
-                0x00000000100000d8                . = ALIGN (0x4)
-                0x00000000100000d8                _ebss = .
+                0x00000000100000d4                . = ALIGN (0x4)
+                0x00000000100000d4                _ebss = .
                 [!provide]                        PROVIDE (end = .)
 
 .noinit_RAM2    0x0000000010080000        0x0
@@ -851,14 +853,14 @@ LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eab
  *(.noinit.$RamAHB_ETB16*)
                 0x000000002000c000                . = ALIGN (0x4)
 
-.noinit         0x00000000100000d8        0x0
-                0x00000000100000d8                _noinit = .
+.noinit         0x00000000100000d4        0x0
+                0x00000000100000d4                _noinit = .
  *(.noinit*)
-                0x00000000100000d8                . = ALIGN (0x4)
-                0x00000000100000d8                _end_noinit = .
+                0x00000000100000d4                . = ALIGN (0x4)
+                0x00000000100000d4                _end_noinit = .
                 [!provide]                        PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
                 0x0000000010008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
-                0xffffffff53ff69ca                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+                0xffffffff53ff6a4a                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
 OUTPUT(build/bin/bases_ramas_tps.elf elf32-littlearm)
 LOAD linker stubs
 
@@ -889,38 +891,38 @@ LOAD linker stubs
  .comment       0x0000000000000049       0x4a build/obj/src/pantalla.o
  .comment       0x0000000000000049       0x4a build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_info     0x0000000000000000     0x1b16
+.debug_info     0x0000000000000000     0x1b12
  .debug_info    0x0000000000000000      0xbca build/obj/src/bsp.o
  .debug_info    0x0000000000000bca      0x6d8 build/obj/src/digital.o
- .debug_info    0x00000000000012a2      0x2d2 build/obj/src/main.o
- .debug_info    0x0000000000001574      0x2c9 build/obj/src/pantalla.o
- .debug_info    0x000000000000183d      0x2d9 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_info    0x00000000000012a2      0x2ce build/obj/src/main.o
+ .debug_info    0x0000000000001570      0x2c9 build/obj/src/pantalla.o
+ .debug_info    0x0000000000001839      0x2d9 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_abbrev   0x0000000000000000      0x705
+.debug_abbrev   0x0000000000000000      0x732
  .debug_abbrev  0x0000000000000000      0x205 build/obj/src/bsp.o
  .debug_abbrev  0x0000000000000205      0x1fa build/obj/src/digital.o
- .debug_abbrev  0x00000000000003ff       0xbe build/obj/src/main.o
- .debug_abbrev  0x00000000000004bd      0x11d build/obj/src/pantalla.o
- .debug_abbrev  0x00000000000005da      0x12b build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_abbrev  0x00000000000003ff       0xeb build/obj/src/main.o
+ .debug_abbrev  0x00000000000004ea      0x11d build/obj/src/pantalla.o
+ .debug_abbrev  0x0000000000000607      0x12b build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_aranges  0x0000000000000000      0x1d0
+.debug_aranges  0x0000000000000000      0x1d8
  .debug_aranges
                 0x0000000000000000       0x58 build/obj/src/bsp.o
  .debug_aranges
                 0x0000000000000058       0xa0 build/obj/src/digital.o
  .debug_aranges
-                0x00000000000000f8       0x20 build/obj/src/main.o
+                0x00000000000000f8       0x28 build/obj/src/main.o
  .debug_aranges
-                0x0000000000000118       0x38 build/obj/src/pantalla.o
+                0x0000000000000120       0x38 build/obj/src/pantalla.o
  .debug_aranges
-                0x0000000000000150       0x80 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x0000000000000158       0x80 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_ranges   0x0000000000000000      0x198
+.debug_ranges   0x0000000000000000      0x1a0
  .debug_ranges  0x0000000000000000       0x48 build/obj/src/bsp.o
  .debug_ranges  0x0000000000000048       0x90 build/obj/src/digital.o
- .debug_ranges  0x00000000000000d8       0x10 build/obj/src/main.o
- .debug_ranges  0x00000000000000e8       0x40 build/obj/src/pantalla.o
- .debug_ranges  0x0000000000000128       0x70 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_ranges  0x00000000000000d8       0x18 build/obj/src/main.o
+ .debug_ranges  0x00000000000000f0       0x40 build/obj/src/pantalla.o
+ .debug_ranges  0x0000000000000130       0x70 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 .debug_macro    0x0000000000000000     0x625e
  .debug_macro   0x0000000000000000      0x33f build/obj/src/bsp.o
@@ -1002,12 +1004,12 @@ LOAD linker stubs
  .debug_macro   0x000000000000620c       0x35 build/obj/src/pantalla.o
  .debug_macro   0x0000000000006241       0x1d build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_line     0x0000000000000000     0x2503
+.debug_line     0x0000000000000000     0x24f1
  .debug_line    0x0000000000000000      0xa84 build/obj/src/bsp.o
  .debug_line    0x0000000000000a84      0xb4c build/obj/src/digital.o
- .debug_line    0x00000000000015d0      0x926 build/obj/src/main.o
- .debug_line    0x0000000000001ef6      0x3e7 build/obj/src/pantalla.o
- .debug_line    0x00000000000022dd      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_line    0x00000000000015d0      0x914 build/obj/src/main.o
+ .debug_line    0x0000000000001ee4      0x3e7 build/obj/src/pantalla.o
+ .debug_line    0x00000000000022cb      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 .debug_str      0x0000000000000000    0x1b4be
  .debug_str     0x0000000000000000    0x18415 build/obj/src/bsp.o
@@ -1015,20 +1017,20 @@ LOAD linker stubs
  .debug_str     0x0000000000018415      0x1fc build/obj/src/digital.o
                                       0x16d5f (size before relaxing)
  .debug_str     0x0000000000018611       0x62 build/obj/src/main.o
-                                      0x17a4d (size before relaxing)
+                                      0x17a47 (size before relaxing)
  .debug_str     0x0000000000018673     0x2bbd build/obj/src/pantalla.o
                                        0x69f0 (size before relaxing)
  .debug_str     0x000000000001b230      0x28e build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
                                        0x2fc2 (size before relaxing)
 
-.debug_frame    0x0000000000000000      0x654
+.debug_frame    0x0000000000000000      0x67c
  .debug_frame   0x0000000000000000      0x13c build/obj/src/bsp.o
  .debug_frame   0x000000000000013c      0x294 build/obj/src/digital.o
- .debug_frame   0x00000000000003d0       0x30 build/obj/src/main.o
- .debug_frame   0x0000000000000400       0x9c build/obj/src/pantalla.o
- .debug_frame   0x000000000000049c      0x170 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
- .debug_frame   0x000000000000060c       0x28 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000000634       0x20 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000000003d0       0x58 build/obj/src/main.o
+ .debug_frame   0x0000000000000428       0x9c build/obj/src/pantalla.o
+ .debug_frame   0x00000000000004c4      0x170 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_frame   0x0000000000000634       0x28 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000000000000065c       0x20 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
 
 Cross Reference Table
 
@@ -1156,6 +1158,7 @@ _vStackTop                                        build/obj/external/base/soc/lp
 atexit                                            /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
 bss_init                                          build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 data_init                                         build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+delay                                             build/obj/src/main.o
 exit                                              /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
                                                   /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
 g_pfnVectors                                      build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o

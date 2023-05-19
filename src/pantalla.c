@@ -2,7 +2,7 @@
 #include <string.h>
 
 #ifndef DISPLAY_MAX_DIGITS
-#define DISPLAY_MAX_DIGITS 8
+#define DISPLAY_MAX_DIGITS 4
 #endif
 
 struct display_s {

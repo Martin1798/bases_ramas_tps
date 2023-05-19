@@ -54,6 +54,7 @@
 /* === Private variable declarations =========================================================== */
 
 /* === Private function declarations =========================================================== */
+void delay(void);
 
 /* === Public variable definitions ============================================================= */
 
@@ -73,54 +74,51 @@ int main(void) {
 
     while (true) {
 
-    DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
+    //DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
+    DigitalOutPutActivate(board->Dig_4);
+    DigitalOutPutActivate(board->Seg_A);
+    delay();
+    DigitalOutPutDesactivate(board->Dig_4);
+    DigitalOutPutDesactivate(board->Seg_A);
+    delay();
+
+    DigitalOutPutActivate(board->Dig_3);
+    DigitalOutPutActivate(board->Seg_B);
+    delay();
+    DigitalOutPutDesactivate(board->Dig_3);
+    DigitalOutPutDesactivate(board->Seg_B);
+    delay();
+
+    DigitalOutPutActivate(board->Dig_2);
+    DigitalOutPutActivate(board->Seg_C);
+    delay();
+    DigitalOutPutDesactivate(board->Dig_2);
+    DigitalOutPutDesactivate(board->Seg_C);
+    delay();
+
+    DigitalOutPutActivate(board->Dig_1);
+    DigitalOutPutActivate(board->Seg_D);
+    delay();
+    DigitalOutPutDesactivate(board->Dig_1);
+    DigitalOutPutDesactivate(board->Seg_D);
+    delay();
+
+    while(DigitalInputState(board->Aceptar)) DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
+
     
-        if(DigitalInputState(board->F1)){
-            DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
-            
-        }
-        if(DigitalInputState(board->F2)){
-            DisplayWriteBCD(board->display,NULL,0);
+    
 
-            
-        }
 
-        for(int index=0;index < 1000 ; index++){
-            for(int delay=0;delay < 24 ; delay++){
-                __asm("NOP");
-             }
-        }
 
-        if(DigitalInputState(board->Aceptar)){
-                DigitalOutPutActivate(board->Dig_1);
-                DigitalOutPutActivate(board->Dig_2);
-                DigitalOutPutActivate(board->Dig_3);
-                DigitalOutPutActivate(board->Dig_4);
-                DigitalOutPutActivate(board->Seg_A);
-                DigitalOutPutActivate(board->Seg_B);
-                DigitalOutPutActivate(board->Seg_C);
-                DigitalOutPutActivate(board->Seg_D);
-                DigitalOutPutActivate(board->Seg_E);
-                DigitalOutPutActivate(board->Seg_F);
-                DigitalOutPutActivate(board->Seg_G);
-                DigitalOutPutActivate(board->Punto);}
 
-        if(DigitalInputState(board->Cancelar)){
-                DigitalOutPutDesactivate(board->Dig_1);
-                DigitalOutPutDesactivate(board->Dig_2);
-                DigitalOutPutDesactivate(board->Dig_3);
-                DigitalOutPutDesactivate(board->Dig_4);
-                DigitalOutPutDesactivate(board->Seg_A);
-                DigitalOutPutDesactivate(board->Seg_B);
-                DigitalOutPutDesactivate(board->Seg_C);
-                DigitalOutPutDesactivate(board->Seg_D);
-                DigitalOutPutDesactivate(board->Seg_E);
-                DigitalOutPutDesactivate(board->Seg_F);
-                DigitalOutPutDesactivate(board->Seg_G);
-                DigitalOutPutDesactivate(board->Punto);}
         
     }
 }
+
+void delay(){
+for(int i=0;i>10000;i++) __asm("NOP");
+}
+
 
 
 /* === End of documentation ==================================================================== */

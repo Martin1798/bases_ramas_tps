@@ -5,11 +5,16 @@
 
 
 static struct board_s board ={0};
+
+
+
     void ScreenTurnOff(void);
 
     void SegmentsTurnOn(uint8_t segments);
 
     void DigitTurnOn(uint8_t digit);
+
+
 
 board_t BoardCreate(void){
 
