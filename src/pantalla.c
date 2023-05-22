@@ -50,6 +50,7 @@ void DisplayWriteBCD(display_t display,uint8_t *number,uint8_t size){
     for(int index=0; index<size; index++){
         if(index>=display->digits) break;
         display->memory[index]=IMAGES[number[index]];
+        
     }
 }
 
@@ -59,6 +60,7 @@ void DisplayRefresh(display_t display){
     display->active_digit=(display->active_digit+1)%display->digits;
     display->driver->SegmentsTurnOn(display->memory[display->active_digit]);
     display->driver->DigitTurnOn(display->active_digit);
+ 
 }
 
 

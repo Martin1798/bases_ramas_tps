@@ -71,11 +71,11 @@ int main(void) {
     
 
     board_t board = BoardCreate();
-
+    DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
     while (true) {
 
-    //DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
-    DigitalOutPutActivate(board->Dig_4);
+    
+    /*DigitalOutPutActivate(board->Dig_4);
     DigitalOutPutActivate(board->Seg_A);
     delay();
     DigitalOutPutDesactivate(board->Dig_4);
@@ -101,12 +101,12 @@ int main(void) {
     delay();
     DigitalOutPutDesactivate(board->Dig_1);
     DigitalOutPutDesactivate(board->Seg_D);
+    delay();*/
+
+    while(DigitalInputState(board->Aceptar)) __asm("NOP");/*DisplayWriteBCD(board->display,(uint8_t[]){1,1,1,1},4)*/;
+    DisplayRefresh(board->display);
+    
     delay();
-
-    while(DigitalInputState(board->Aceptar)) DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
-
-    
-    
 
 
 
@@ -116,7 +116,7 @@ int main(void) {
 }
 
 void delay(){
-for(int i=0;i>10000;i++) __asm("NOP");
+    for(int i=0;i>10000;i++) __asm("NOP");
 }
 
 
