@@ -67,56 +67,42 @@ void delay(void);
 int main(void) {
 
 
-
+    static volatile uint8_t uni=0,dec=0,cen=0,mil=0;
+    int base=0;
     
 
     board_t board = BoardCreate();
-    DisplayWriteBCD(board->display,(uint8_t[]){1,2,3,4},4);
+    DisplayWriteBCD(board->display,(uint8_t[]){0,0,0,0},4);
     while (true) {
 
-    
-    /*DigitalOutPutActivate(board->Dig_4);
-    DigitalOutPutActivate(board->Seg_A);
-    delay();
-    DigitalOutPutDesactivate(board->Dig_4);
-    DigitalOutPutDesactivate(board->Seg_A);
-    delay();
 
-    DigitalOutPutActivate(board->Dig_3);
-    DigitalOutPutActivate(board->Seg_B);
-    delay();
-    DigitalOutPutDesactivate(board->Dig_3);
-    DigitalOutPutDesactivate(board->Seg_B);
-    delay();
-
-    DigitalOutPutActivate(board->Dig_2);
-    DigitalOutPutActivate(board->Seg_C);
-    delay();
-    DigitalOutPutDesactivate(board->Dig_2);
-    DigitalOutPutDesactivate(board->Seg_C);
-    delay();
-
-    DigitalOutPutActivate(board->Dig_1);
-    DigitalOutPutActivate(board->Seg_D);
-    delay();
-    DigitalOutPutDesactivate(board->Dig_1);
-    DigitalOutPutDesactivate(board->Seg_D);
-    delay();*/
-
-    while(DigitalInputState(board->Aceptar)) __asm("NOP");/*DisplayWriteBCD(board->display,(uint8_t[]){1,1,1,1},4)*/;
+   
     DisplayRefresh(board->display);
-    
     delay();
+    if(base>=100){
+        uni++;
+        base=0;
+        if(uni>9) {uni=0; dec++;}
+        if(dec>5) {dec=0; cen++;}
+        if(cen>9) {cen=0; mil++;}
+        if(mil>5) {mil=0;}
 
+        DisplayWriteBCD(board->display,(uint8_t[]){uni,dec,cen,mil},4);
 
-
+    }
+    base=base+1;
 
         
     }
 }
 
 void delay(){
-    for(int i=0;i>10000;i++) __asm("NOP");
+    for(int i=0;i<1000;i++) {
+
+        for(int o=0;o<1;o++){
+            __asm("NOP");
+        }
+    }
 }
 
 

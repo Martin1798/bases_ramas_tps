@@ -19,6 +19,8 @@ static const uint8_t IMAGES[]={
     SEGMENT_A | SEGMENT_B | SEGMENT_C | SEGMENT_D | SEGMENT_G,
     SEGMENT_B | SEGMENT_C | SEGMENT_F | SEGMENT_G,
     SEGMENT_A | SEGMENT_C | SEGMENT_D | SEGMENT_F | SEGMENT_G,
+    SEGMENT_A | SEGMENT_C | SEGMENT_D | SEGMENT_E | SEGMENT_F |SEGMENT_G,
+    SEGMENT_A | SEGMENT_B | SEGMENT_C | SEGMENT_F,
     SEGMENT_A | SEGMENT_B | SEGMENT_C | SEGMENT_D | SEGMENT_E | SEGMENT_F |SEGMENT_G,
     SEGMENT_A | SEGMENT_B | SEGMENT_C | SEGMENT_F | SEGMENT_G,
 };
@@ -60,6 +62,15 @@ void DisplayRefresh(display_t display){
     display->active_digit=(display->active_digit+1)%display->digits;
     display->driver->SegmentsTurnOn(display->memory[display->active_digit]);
     display->driver->DigitTurnOn(display->active_digit);
+    for(int a=0;a>1000000;a++){
+        for(int b=0;b>1000000;b++){
+            for(int C=0;C>1000000;C++){
+
+            __asm("NOP");
+            }
+            
+        }
+    }
  
 }
 
