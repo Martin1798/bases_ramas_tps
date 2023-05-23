@@ -1006,12 +1006,12 @@ LOAD linker stubs
  .debug_macro   0x000000000000620c       0x35 build/obj/src/pantalla.o
  .debug_macro   0x0000000000006241       0x1d build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
-.debug_line     0x0000000000000000     0x257f
+.debug_line     0x0000000000000000     0x257d
  .debug_line    0x0000000000000000      0xa87 build/obj/src/bsp.o
  .debug_line    0x0000000000000a87      0xb4c build/obj/src/digital.o
- .debug_line    0x00000000000015d3      0x95c build/obj/src/main.o
- .debug_line    0x0000000000001f2f      0x42a build/obj/src/pantalla.o
- .debug_line    0x0000000000002359      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_line    0x00000000000015d3      0x95a build/obj/src/main.o
+ .debug_line    0x0000000000001f2d      0x42a build/obj/src/pantalla.o
+ .debug_line    0x0000000000002357      0x226 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
 
 .debug_str      0x0000000000000000    0x1b4c3
  .debug_str     0x0000000000000000    0x18415 build/obj/src/bsp.o

@@ -73,13 +73,14 @@ int main(void) {
 
     board_t board = BoardCreate();
     DisplayWriteBCD(board->display,(uint8_t[]){0,0,0,0},4);
+    
     while (true) {
 
-
-   
     DisplayRefresh(board->display);
     delay();
+
     if(base>=100){
+
         uni++;
         base=0;
         if(uni>9) {uni=0; dec++;}
@@ -88,9 +89,9 @@ int main(void) {
         if(mil>5) {mil=0;}
 
         DisplayWriteBCD(board->display,(uint8_t[]){uni,dec,cen,mil},4);
-
     }
-    base=base+1;
+
+    base++;
 
         
     }
