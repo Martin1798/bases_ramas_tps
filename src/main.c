@@ -68,7 +68,7 @@ int main(void) {
 
     //SysTick_Init(1);
     board_t board = BoardCreate();
-    reloj_t reloj=CrearReloj(10);
+    reloj_t reloj=CrearReloj(1);
 
     uint8_t hora[6];
 
