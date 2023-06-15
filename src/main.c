@@ -2,7 +2,7 @@
  * Facultad de Ciencias Exactas y Tecnología
  * Universidad Nacional de Tucuman
  * http://www.microprocesadores.unt.edu.ar/
- * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar >
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -19,7 +19,7 @@
  *    contributors may be used to endorse or promote products derived from this
  *    software without specific prior written permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS  "
  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
  * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
@@ -41,76 +41,21 @@
 /* === Headers files inclusions =============================================================== */
 
 #include "chip.h"
+#include "digital.h"
+#include "poncho.h"
+#include "bsp.h"
+#include "reloj_lib.h"
 #include <stdbool.h>
 
+
 /* === Macros definitions ====================================================================== */
-
-#define LED_R_PORT 2
-#define LED_R_PIN 0
-#define LED_R_FUNC SCU_MODE_FUNC4
-#define LED_R_GPIO 5
-#define LED_R_BIT 0
-
-#define LED_G_PORT 2
-#define LED_G_PIN 1
-#define LED_G_FUNC SCU_MODE_FUNC4
-#define LED_G_GPIO 5
-#define LED_G_BIT 1
-
-#define LED_B_PORT 2
-#define LED_B_PIN 2
-#define LED_B_FUNC SCU_MODE_FUNC4
-#define LED_B_GPIO 5
-#define LED_B_BIT 2
-
-#define LED_1_PORT 2
-#define LED_1_PIN 10
-#define LED_1_FUNC SCU_MODE_FUNC0
-#define LED_1_GPIO 0
-#define LED_1_BIT 14
-
-#define LED_2_PORT 2
-#define LED_2_PIN 11
-#define LED_2_FUNC SCU_MODE_FUNC0
-#define LED_2_GPIO 1
-#define LED_2_BIT 11
-
-#define LED_3_PORT 2
-#define LED_3_PIN 12
-#define LED_3_FUNC SCU_MODE_FUNC0
-#define LED_3_GPIO 1
-#define LED_3_BIT 12
-
-#define TEC_1_PORT 1
-#define TEC_1_PIN 0
-#define TEC_1_FUNC SCU_MODE_FUNC0
-#define TEC_1_GPIO 0
-#define TEC_1_BIT 4
-
-#define TEC_2_PORT 1
-#define TEC_2_PIN 1
-#define TEC_2_FUNC SCU_MODE_FUNC0
-#define TEC_2_GPIO 0
-#define TEC_2_BIT 8
-
-#define TEC_3_PORT 1
-#define TEC_3_PIN 2
-#define TEC_3_FUNC SCU_MODE_FUNC0
-#define TEC_3_GPIO 0
-#define TEC_3_BIT 9
-
-#define TEC_4_PORT 1
-#define TEC_4_PIN 6
-#define TEC_4_FUNC SCU_MODE_FUNC0
-#define TEC_4_GPIO 1
-#define TEC_4_BIT 9
 
 /* === Private data type declarations ========================================================== */
 
 /* === Private variable declarations =========================================================== */
 
 /* === Private function declarations =========================================================== */
-
+void delay(void);
 /* === Public variable definitions ============================================================= */
 
 /* === Private variable definitions ============================================================ */
@@ -121,80 +66,42 @@
 
 int main(void) {
 
-    int divisor = 0;
-    bool current_state, last_state = false;
+    //SysTick_Init(1);
+    board_t board = BoardCreate();
+    reloj_t reloj=CrearReloj(10);
 
-    Chip_SCU_PinMuxSet(LED_R_PORT, LED_R_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_R_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_R_GPIO, LED_R_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_R_GPIO, LED_R_BIT, true);
+    uint8_t hora[6];
 
-    Chip_SCU_PinMuxSet(LED_G_PORT, LED_G_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_G_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_G_GPIO, LED_G_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_G_GPIO, LED_G_BIT, true);
 
-    Chip_SCU_PinMuxSet(LED_B_PORT, LED_B_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_B_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_B_GPIO, LED_B_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_B_GPIO, LED_B_BIT, true);
-
-    /******************/
-    Chip_SCU_PinMuxSet(LED_1_PORT, LED_1_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_1_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_1_GPIO, LED_1_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_1_GPIO, LED_1_BIT, true);
-
-    Chip_SCU_PinMuxSet(LED_2_PORT, LED_2_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_2_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_2_GPIO, LED_2_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_2_GPIO, LED_2_BIT, true);
-
-    Chip_SCU_PinMuxSet(LED_3_PORT, LED_3_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_INACT | LED_3_FUNC);
-    Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_3_GPIO, LED_3_BIT, false);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, LED_3_GPIO, LED_3_BIT, true);
-
-    /******************/
-    Chip_SCU_PinMuxSet(TEC_1_PORT, TEC_1_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_1_FUNC);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, TEC_1_GPIO, TEC_1_BIT, false);
-
-    Chip_SCU_PinMuxSet(TEC_2_PORT, TEC_2_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_2_FUNC);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, TEC_2_GPIO, TEC_2_BIT, false);
-
-    Chip_SCU_PinMuxSet(TEC_3_PORT, TEC_3_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_3_FUNC);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, TEC_3_GPIO, TEC_3_BIT, false);
-
-    Chip_SCU_PinMuxSet(TEC_4_PORT, TEC_4_PIN, SCU_MODE_INBUFF_EN | SCU_MODE_PULLUP | TEC_4_FUNC);
-    Chip_GPIO_SetPinDIR(LPC_GPIO_PORT, TEC_4_GPIO, TEC_4_BIT, false);
-
+    DisplayWriteBCD(board->display,(uint8_t[]){0,0,0,0},4);
+    
     while (true) {
-        if (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_1_GPIO, TEC_1_BIT) == 0) {
-            Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_B_GPIO, LED_B_BIT, true);
-        } else {
-            Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_B_GPIO, LED_B_BIT, false);
-        }
+    DisplayRefresh(board->display);
+    
+    delay();
+    DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
+    ActualizarHora(reloj);
+    DarHora(reloj,hora,6);
+        
+    }
+}
 
-        current_state = (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_2_GPIO, TEC_2_BIT) == 0);
-        if ((current_state) && (!last_state)) {
-            Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, LED_1_GPIO, LED_1_BIT);
-        }
-        last_state = current_state;
+void delay(){
+    for(int i=0;i<1000;i++) {
 
-        if (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_3_GPIO, TEC_3_BIT) == 0) {
-            Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_2_GPIO, LED_2_BIT, true);
-        }
-        if (Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, TEC_4_GPIO, TEC_4_BIT) == 0) {
-            Chip_GPIO_SetPinState(LPC_GPIO_PORT, LED_2_GPIO, LED_2_BIT, false);
-        }
-
-        divisor++;
-        if (divisor == 5) {
-            divisor = 0;
-            Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, LED_3_GPIO, LED_3_BIT);
-        }
-
-        for (int index = 0; index < 100; index++) {
-            for (int delay = 0; delay < 25000; delay++) {
-                __asm("NOP");
-            }
+        for(int o=0;o<1;o++){
+            __asm("NOP");
         }
     }
 }
+
+
+/*void SysTick_Handler(void){
+    //DisplayRefresh(board->display);
+    __asm ("NOP");
+}*/
+
+
 
 /* === End of documentation ==================================================================== */
 

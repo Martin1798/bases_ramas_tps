@@ -1,0 +1,1304 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+                              /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o (exit)
+/usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+                              /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+                              /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o (__libc_init_array)
+/usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+                              build/obj/src/reloj_lib.o (memcmp)
+/usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+                              build/obj/src/pantalla.o (memcpy)
+/usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+                              /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o (memset)
+/usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+                              /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o) (_exit)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+ .text          0x0000000000000000       0x40 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .data          0x0000000000000000        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .bss           0x0000000000000000       0x1c /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .rodata        0x0000000000000000       0x24 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .init_array    0x0000000000000000        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .fini_array    0x0000000000000000        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .eh_frame      0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .ARM.attributes
+                0x0000000000000000       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+ .text          0x0000000000000000       0x7c /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+ .ARM.exidx     0x0000000000000000       0x10 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1c /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/bsp.o
+ .text          0x0000000000000000        0x0 build/obj/src/bsp.o
+ .data          0x0000000000000000        0x0 build/obj/src/bsp.o
+ .bss           0x0000000000000000        0x0 build/obj/src/bsp.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/digital.o
+ .text          0x0000000000000000        0x0 build/obj/src/digital.o
+ .data          0x0000000000000000        0x0 build/obj/src/digital.o
+ .bss           0x0000000000000000        0x0 build/obj/src/digital.o
+ .text.Chip_GPIO_ReadPortBit
+                0x0000000000000000       0x34 build/obj/src/digital.o
+ .text.Chip_GPIO_SetPinToggle
+                0x0000000000000000       0x32 build/obj/src/digital.o
+ .text.DigitalOutPutActivate
+                0x0000000000000000       0x24 build/obj/src/digital.o
+ .text.DigitalOutPutDesactivate
+                0x0000000000000000       0x24 build/obj/src/digital.o
+ .text.DigitalOutPutToggle
+                0x0000000000000000       0x24 build/obj/src/digital.o
+ .text.DigitalInputState
+                0x0000000000000000       0x3c build/obj/src/digital.o
+ .text.DigitalInputhasChanged
+                0x0000000000000000       0x32 build/obj/src/digital.o
+ .text.DigitalInputhasActivated
+                0x0000000000000000       0x46 build/obj/src/digital.o
+ .text.DigitalInputhasDesactivated
+                0x0000000000000000       0x4c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0xaba build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x10 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x8e build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x51 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x103 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x6a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x1df build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x73 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x28 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xfb build/obj/src/digital.o
+ .debug_macro   0x0000000000000000     0x1011 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x11f build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x2c3 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x112 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x11 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x2a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x2e6 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x82 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x13d build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x198 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x34 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x58 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x236 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x572 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x18a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x88 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x1b9 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x1da build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x201 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xe0 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x34c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xdc build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xc4 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x8f build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x94 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xb8 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x4c build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000      0x328 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x3a build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0xd0 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x18 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/digital.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/digital.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/main.o
+ .text          0x0000000000000000        0x0 build/obj/src/main.o
+ .data          0x0000000000000000        0x0 build/obj/src/main.o
+ .bss           0x0000000000000000        0x0 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0xaba build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x10 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x8e build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x51 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x103 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x6a build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x1df build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x73 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x28 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xfb build/obj/src/main.o
+ .debug_macro   0x0000000000000000     0x1011 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x11f build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x2c3 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x112 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x11 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x2a build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x2e6 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x82 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x13d build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x198 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x34 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x58 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x236 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x572 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x18a build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x88 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x1b9 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x1da build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x1c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x2e build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x201 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xe0 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x34c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xdc build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xc4 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x8f build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x94 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xb8 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x4c build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x328 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x3a build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0xd0 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x18 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x40 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/main.o
+ .debug_macro   0x0000000000000000      0x475 build/obj/src/main.o
+ .debug_macro   0x0000000000000000       0x3a build/obj/src/main.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/pantalla.o
+ .text          0x0000000000000000        0x0 build/obj/src/pantalla.o
+ .data          0x0000000000000000        0x0 build/obj/src/pantalla.o
+ .bss           0x0000000000000000        0x0 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000      0xaba build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000       0x8e build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000       0x51 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000      0x103 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000       0x6a build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000      0x1df build/obj/src/pantalla.o
+ .debug_macro   0x0000000000000000       0x3a build/obj/src/pantalla.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/src/reloj_lib.o
+ .text          0x0000000000000000        0x0 build/obj/src/reloj_lib.o
+ .data          0x0000000000000000        0x0 build/obj/src/reloj_lib.o
+ .bss           0x0000000000000000        0x0 build/obj/src/reloj_lib.o
+ .text.ConfigurarPulsos
+                0x0000000000000000       0x1a build/obj/src/reloj_lib.o
+ .text.AumentarPulsos
+                0x0000000000000000       0x1e build/obj/src/reloj_lib.o
+ .text.FijarAlarma
+                0x0000000000000000       0x98 build/obj/src/reloj_lib.o
+ .text.ConsultarHoraAlarma
+                0x0000000000000000       0x26 build/obj/src/reloj_lib.o
+ .text.GestionAlarma
+                0x0000000000000000       0x22 build/obj/src/reloj_lib.o
+ .text.EstadoActualAlarma
+                0x0000000000000000       0x18 build/obj/src/reloj_lib.o
+ .text.PosponerAlarma
+                0x0000000000000000       0x2c build/obj/src/reloj_lib.o
+ .text.PosponerAlarmaDia
+                0x0000000000000000       0x1e build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000      0xaba build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x8e build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x51 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000      0x103 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x6a build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000      0x1df build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x22 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x64 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x1e build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x35 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x34 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000      0x174 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x16 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x43 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x34 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x10 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x58 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000      0x182 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000      0x341 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x10 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000000000       0x35 build/obj/src/reloj_lib.o
+ .group         0x0000000000000000        0xc build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .text          0x0000000000000000        0x0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .data          0x0000000000000000        0x0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .bss           0x0000000000000000        0x0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_macro   0x0000000000000000      0xaba build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x28 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000000000000000        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+ .data.impure_data
+                0x0000000000000000       0x60 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x0000000000000000       0x48 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000000000       0x2c /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+ .text._exit    0x0000000000000000        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000000       0x20 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
+ .rodata        0x0000000000000000       0x24 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
+ .ARM.attributes
+                0x0000000000000000       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
+ .text          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .data          0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .bss           0x0000000000000000        0x0 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .init          0x0000000000000000        0x8 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .fini          0x0000000000000000        0x8 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MFlashA512       0x000000001a000000 0x0000000000080000 xr
+MFlashB512       0x000000001b000000 0x0000000000080000 xr
+RamLoc32         0x0000000010000000 0x0000000000008000 xrw
+RamLoc40         0x0000000010080000 0x000000000000a000 xrw
+RamAHB32         0x0000000020000000 0x0000000000008000 xrw
+RamAHB16         0x0000000020008000 0x0000000000004000 xrw
+RamAHB_ETB16     0x000000002000c000 0x0000000000004000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+LOAD build/obj/src/bsp.o
+LOAD build/obj/src/digital.o
+LOAD build/obj/src/main.o
+LOAD build/obj/src/pantalla.o
+LOAD build/obj/src/reloj_lib.o
+LOAD build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+LOAD build/lib/board/edu-ciaa-nxp.a
+START GROUP
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/libgcc.a
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/libgcc.a
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a
+END GROUP
+START GROUP
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/libgcc.a
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a
+END GROUP
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtend.o
+LOAD /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtn.o
+                0x000000001a000000                __base_MFlashA512 = 0x1a000000
+                0x000000001a000000                __base_Flash = 0x1a000000
+                0x000000001a080000                __top_MFlashA512 = 0x1a080000
+                0x000000001a080000                __top_Flash = 0x1a080000
+                0x000000001b000000                __base_MFlashB512 = 0x1b000000
+                0x000000001b000000                __base_Flash2 = 0x1b000000
+                0x000000001b080000                __top_MFlashB512 = 0x1b080000
+                0x000000001b080000                __top_Flash2 = 0x1b080000
+                0x0000000010000000                __base_RamLoc32 = 0x10000000
+                0x0000000010000000                __base_RAM = 0x10000000
+                0x0000000010008000                __top_RamLoc32 = 0x10008000
+                0x0000000010008000                __top_RAM = 0x10008000
+                0x0000000010080000                __base_RamLoc40 = 0x10080000
+                0x0000000010080000                __base_RAM2 = 0x10080000
+                0x000000001008a000                __top_RamLoc40 = 0x1008a000
+                0x000000001008a000                __top_RAM2 = 0x1008a000
+                0x0000000020000000                __base_RamAHB32 = 0x20000000
+                0x0000000020000000                __base_RAM3 = 0x20000000
+                0x0000000020008000                __top_RamAHB32 = 0x20008000
+                0x0000000020008000                __top_RAM3 = 0x20008000
+                0x0000000020008000                __base_RamAHB16 = 0x20008000
+                0x0000000020008000                __base_RAM4 = 0x20008000
+                0x000000002000c000                __top_RamAHB16 = 0x2000c000
+                0x000000002000c000                __top_RAM4 = 0x2000c000
+                0x000000002000c000                __base_RamAHB_ETB16 = 0x2000c000
+                0x000000002000c000                __base_RAM5 = 0x2000c000
+                0x0000000020010000                __top_RamAHB_ETB16 = 0x20010000
+                0x0000000020010000                __top_RAM5 = 0x20010000
+
+.text_Flash2    0x000000001b000000        0x0
+ FILL mask 0xff
+ *(.text_Flash2*)
+ *(.text_MFlashB512*)
+ *(.text.$Flash2*)
+ *(.text.$MFlashB512*)
+ *(.rodata.$Flash2*)
+ *(.rodata.$MFlashB512*)
+
+.text           0x000000001a000000      0x234
+ FILL mask 0xff
+                0x000000001a000000                __vectors_start__ = ABSOLUTE (.)
+ *(.isr_vector)
+ .isr_vector    0x000000001a000000      0x114 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x000000001a000000                g_pfnVectors
+                0x000000001a000114                . = ALIGN (0x4)
+                0x000000001a000114                __section_table_start = .
+                0x000000001a000114                __data_section_table = .
+                0x000000001a000114        0x4 LONG 0x1a000f0c LOADADDR (.data)
+                0x000000001a000118        0x4 LONG 0x10000000 ADDR (.data)
+                0x000000001a00011c        0x4 LONG 0x0 SIZEOF (.data)
+                0x000000001a000120        0x4 LONG 0x1a000f0c LOADADDR (.data_RAM2)
+                0x000000001a000124        0x4 LONG 0x10080000 ADDR (.data_RAM2)
+                0x000000001a000128        0x4 LONG 0x0 SIZEOF (.data_RAM2)
+                0x000000001a00012c        0x4 LONG 0x1a000f0c LOADADDR (.data_RAM3)
+                0x000000001a000130        0x4 LONG 0x20000000 ADDR (.data_RAM3)
+                0x000000001a000134        0x4 LONG 0x0 SIZEOF (.data_RAM3)
+                0x000000001a000138        0x4 LONG 0x1a000f0c LOADADDR (.data_RAM4)
+                0x000000001a00013c        0x4 LONG 0x20008000 ADDR (.data_RAM4)
+                0x000000001a000140        0x4 LONG 0x0 SIZEOF (.data_RAM4)
+                0x000000001a000144        0x4 LONG 0x1a000f0c LOADADDR (.data_RAM5)
+                0x000000001a000148        0x4 LONG 0x2000c000 ADDR (.data_RAM5)
+                0x000000001a00014c        0x4 LONG 0x0 SIZEOF (.data_RAM5)
+                0x000000001a000150                __data_section_table_end = .
+                0x000000001a000150                __bss_section_table = .
+                0x000000001a000150        0x4 LONG 0x10000000 ADDR (.bss)
+                0x000000001a000154        0x4 LONG 0xec SIZEOF (.bss)
+                0x000000001a000158        0x4 LONG 0x10080000 ADDR (.bss_RAM2)
+                0x000000001a00015c        0x4 LONG 0x0 SIZEOF (.bss_RAM2)
+                0x000000001a000160        0x4 LONG 0x20000000 ADDR (.bss_RAM3)
+                0x000000001a000164        0x4 LONG 0x0 SIZEOF (.bss_RAM3)
+                0x000000001a000168        0x4 LONG 0x20008000 ADDR (.bss_RAM4)
+                0x000000001a00016c        0x4 LONG 0x0 SIZEOF (.bss_RAM4)
+                0x000000001a000170        0x4 LONG 0x2000c000 ADDR (.bss_RAM5)
+                0x000000001a000174        0x4 LONG 0x0 SIZEOF (.bss_RAM5)
+                0x000000001a000178                __bss_section_table_end = .
+                0x000000001a000178                __section_table_end = .
+ *(.after_vectors*)
+ .after_vectors
+                0x000000001a000178       0xbc build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x000000001a000178                data_init
+                0x000000001a0001be                bss_init
+                0x000000001a0001f8                NMI_Handler
+                0x000000001a0001fe                HardFault_Handler
+                0x000000001a000204                MemManage_Handler
+                0x000000001a00020a                BusFault_Handler
+                0x000000001a000210                UsageFault_Handler
+                0x000000001a000216                SVC_Handler
+                0x000000001a00021c                DebugMon_Handler
+                0x000000001a000222                PendSV_Handler
+                0x000000001a000228                SysTick_Handler
+                0x000000001a00022e                TIMER2_IRQHandler
+                0x000000001a00022e                RIT_IRQHandler
+                0x000000001a00022e                FLASH_EEPROM_IRQHandler
+                0x000000001a00022e                I2C0_IRQHandler
+                0x000000001a00022e                SDIO_IRQHandler
+                0x000000001a00022e                ATIMER_IRQHandler
+                0x000000001a00022e                I2C1_IRQHandler
+                0x000000001a00022e                UART1_IRQHandler
+                0x000000001a00022e                GPIO5_IRQHandler
+                0x000000001a00022e                CAN1_IRQHandler
+                0x000000001a00022e                USB1_IRQHandler
+                0x000000001a00022e                I2S0_IRQHandler
+                0x000000001a00022e                TIMER3_IRQHandler
+                0x000000001a00022e                UART0_IRQHandler
+                0x000000001a00022e                SGPIO_IRQHandler
+                0x000000001a00022e                ADC0_IRQHandler
+                0x000000001a00022e                GPIO6_IRQHandler
+                0x000000001a00022e                IntDefaultHandler
+                0x000000001a00022e                GPIO1_IRQHandler
+                0x000000001a00022e                SSP0_IRQHandler
+                0x000000001a00022e                ADC1_IRQHandler
+                0x000000001a00022e                RTC_IRQHandler
+                0x000000001a00022e                TIMER0_IRQHandler
+                0x000000001a00022e                SPI_IRQHandler
+                0x000000001a00022e                LCD_IRQHandler
+                0x000000001a00022e                VADC_IRQHandler
+                0x000000001a00022e                TIMER1_IRQHandler
+                0x000000001a00022e                UART2_IRQHandler
+                0x000000001a00022e                GPIO2_IRQHandler
+                0x000000001a00022e                I2S1_IRQHandler
+                0x000000001a00022e                SSP1_IRQHandler
+                0x000000001a00022e                USB0_IRQHandler
+                0x000000001a00022e                GPIO3_IRQHandler
+                0x000000001a00022e                SCT_IRQHandler
+                0x000000001a00022e                WDT_IRQHandler
+                0x000000001a00022e                GPIO7_IRQHandler
+                0x000000001a00022e                SPIFI_IRQHandler
+                0x000000001a00022e                QEI_IRQHandler
+                0x000000001a00022e                ETH_IRQHandler
+                0x000000001a00022e                M0CORE_IRQHandler
+                0x000000001a00022e                CAN0_IRQHandler
+                0x000000001a00022e                GINT0_IRQHandler
+                0x000000001a00022e                DAC_IRQHandler
+                0x000000001a00022e                M0SUB_IRQHandler
+                0x000000001a00022e                GPIO0_IRQHandler
+                0x000000001a00022e                DMA_IRQHandler
+                0x000000001a00022e                EVRT_IRQHandler
+                0x000000001a00022e                UART3_IRQHandler
+                0x000000001a00022e                MCPWM_IRQHandler
+                0x000000001a00022e                GINT1_IRQHandler
+                0x000000001a00022e                GPIO4_IRQHandler
+
+.glue_7         0x000000001a000234        0x0
+ .glue_7        0x000000001a000234        0x0 linker stubs
+
+.glue_7t        0x000000001a000234        0x0
+ .glue_7t       0x000000001a000234        0x0 linker stubs
+
+.vfp11_veneer   0x000000001a000234        0x0
+ .vfp11_veneer  0x000000001a000234        0x0 linker stubs
+
+.v4_bx          0x000000001a000234        0x0
+ .v4_bx         0x000000001a000234        0x0 linker stubs
+
+.init           0x000000001a000234        0x4
+ .init          0x000000001a000234        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+                0x000000001a000234                _init
+
+.fini           0x000000001a000238        0x4
+ .fini          0x000000001a000238        0x4 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+                0x000000001a000238                _fini
+
+.iplt           0x000000001a00023c        0x0
+ .iplt          0x000000001a00023c        0x0 build/obj/src/bsp.o
+
+.text           0x000000001a00023c      0xcd0
+ *(.text*)
+ .text.Chip_SCU_PinMuxSet
+                0x000000001a00023c       0x34 build/obj/src/bsp.o
+ .text.Chip_GPIO_SetPinState
+                0x000000001a000270       0x38 build/obj/src/bsp.o
+ .text.Chip_GPIO_SetValue
+                0x000000001a0002a8       0x28 build/obj/src/bsp.o
+ .text.Chip_GPIO_ClearValue
+                0x000000001a0002d0       0x28 build/obj/src/bsp.o
+ .text.BoardCreate
+                0x000000001a0002f8      0x2e8 build/obj/src/bsp.o
+                0x000000001a0002f8                BoardCreate
+ .text.ScreenTurnOff
+                0x000000001a0005e0       0x2c build/obj/src/bsp.o
+                0x000000001a0005e0                ScreenTurnOff
+ .text.SegmentsTurnOn
+                0x000000001a00060c       0x4c build/obj/src/bsp.o
+                0x000000001a00060c                SegmentsTurnOn
+ .text.DigitTurnOn
+                0x000000001a000658       0x2c build/obj/src/bsp.o
+                0x000000001a000658                DigitTurnOn
+ .text.Chip_GPIO_SetPinState
+                0x000000001a000684       0x38 build/obj/src/digital.o
+ .text.Chip_GPIO_SetPinDIROutput
+                0x000000001a0006bc       0x3e build/obj/src/digital.o
+ .text.Chip_GPIO_SetPinDIRInput
+                0x000000001a0006fa       0x40 build/obj/src/digital.o
+ .text.Chip_GPIO_SetPinDIR
+                0x000000001a00073a       0x42 build/obj/src/digital.o
+ .text.DigitalOutputAllocate
+                0x000000001a00077c       0x6c build/obj/src/digital.o
+                0x000000001a00077c                DigitalOutputAllocate
+ .text.DigitalinputAllocate
+                0x000000001a0007e8       0x6c build/obj/src/digital.o
+                0x000000001a0007e8                DigitalinputAllocate
+ .text.DigitalInputCreate
+                0x000000001a000854       0x50 build/obj/src/digital.o
+                0x000000001a000854                DigitalInputCreate
+ .text.Digital_OutputCreate
+                0x000000001a0008a4       0x58 build/obj/src/digital.o
+                0x000000001a0008a4                Digital_OutputCreate
+ .text.main     0x000000001a0008fc       0x68 build/obj/src/main.o
+                0x000000001a0008fc                main
+ .text.delay    0x000000001a000964       0x3c build/obj/src/main.o
+                0x000000001a000964                delay
+ .text.Display_Allocate
+                0x000000001a0009a0       0x14 build/obj/src/pantalla.o
+ .text.DisplayCreate
+                0x000000001a0009b4       0x54 build/obj/src/pantalla.o
+                0x000000001a0009b4                DisplayCreate
+ .text.DisplayWriteBCD
+                0x000000001a000a08       0x68 build/obj/src/pantalla.o
+                0x000000001a000a08                DisplayWriteBCD
+ .text.DisplayRefresh
+                0x000000001a000a70       0x94 build/obj/src/pantalla.o
+                0x000000001a000a70                DisplayRefresh
+ .text.CrearReloj
+                0x000000001a000b04       0x28 build/obj/src/reloj_lib.o
+                0x000000001a000b04                CrearReloj
+ .text.ConfigurarHora
+                0x000000001a000b2c       0x44 build/obj/src/reloj_lib.o
+                0x000000001a000b2c                ConfigurarHora
+ .text.DarHora  0x000000001a000b70       0x26 build/obj/src/reloj_lib.o
+                0x000000001a000b70                DarHora
+ .text.ActualizarHora
+                0x000000001a000b96       0x62 build/obj/src/reloj_lib.o
+                0x000000001a000b96                ActualizarHora
+ .text.AlarmaActivar
+                0x000000001a000bf8       0x6e build/obj/src/reloj_lib.o
+                0x000000001a000bf8                AlarmaActivar
+ .text.Cada_Segundo
+                0x000000001a000c66       0xec build/obj/src/reloj_lib.o
+                0x000000001a000c66                Cada_Segundo
+ .text.validar_hora
+                0x000000001a000d52       0x76 build/obj/src/reloj_lib.o
+                0x000000001a000d52                validar_hora
+ .text.ResetISR
+                0x000000001a000dc8       0xe0 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                0x000000001a000dc8                ResetISR
+ .text.memcmp   0x000000001a000ea8       0x20 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+                0x000000001a000ea8                memcmp
+ .text.memcpy   0x000000001a000ec8       0x1c /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000001a000ec8                memcpy
+ .text.memset   0x000000001a000ee4       0x10 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+                0x000000001a000ee4                memset
+ *(.rodata .rodata.* .constdata .constdata.*)
+ .rodata        0x000000001a000ef4        0xc build/obj/src/bsp.o
+ .rodata.IMAGES
+                0x000000001a000f00        0xa build/obj/src/pantalla.o
+                0x000000001a000f0c                . = ALIGN (0x4)
+ *fill*         0x000000001a000f0a        0x2 
+
+.rel.dyn        0x000000001a000f0c        0x0
+ .rel.iplt      0x000000001a000f0c        0x0 build/obj/src/bsp.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000000001a000f0c                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x000000001a000f0c                __exidx_end = .
+                0x000000001a000f0c                _etext = .
+
+.data_RAM2      0x0000000010080000        0x0 load address 0x000000001a000f0c
+ FILL mask 0xff
+                [!provide]                        PROVIDE (__start_data_RAM2 = .)
+ *(.ramfunc.$RAM2)
+ *(.ramfunc.$RamLoc40)
+ *(.data.$RAM2*)
+ *(.data.$RamLoc40*)
+ *(.bss.ucHeap)
+                0x0000000010080000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__end_data_RAM2 = .)
+
+.data_RAM3      0x0000000020000000        0x0 load address 0x000000001a000f0c
+ FILL mask 0xff
+                [!provide]                        PROVIDE (__start_data_RAM3 = .)
+ *(.ramfunc.$RAM3)
+ *(.ramfunc.$RamAHB32)
+ *(.data.$RAM3*)
+ *(.data.$RamAHB32*)
+                0x0000000020000000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__end_data_RAM3 = .)
+
+.data_RAM4      0x0000000020008000        0x0 load address 0x000000001a000f0c
+ FILL mask 0xff
+                [!provide]                        PROVIDE (__start_data_RAM4 = .)
+ *(.ramfunc.$RAM4)
+ *(.ramfunc.$RamAHB16)
+ *(.data.$RAM4*)
+ *(.data.$RamAHB16*)
+                0x0000000020008000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__end_data_RAM4 = .)
+
+.data_RAM5      0x000000002000c000        0x0 load address 0x000000001a000f0c
+ FILL mask 0xff
+                [!provide]                        PROVIDE (__start_data_RAM5 = .)
+ *(.ramfunc.$RAM5)
+ *(.ramfunc.$RamAHB_ETB16)
+ *(.data.$RAM5*)
+ *(.data.$RamAHB_ETB16*)
+                0x000000002000c000                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__end_data_RAM5 = .)
+
+.uninit_RESERVED
+                0x0000000010000000        0x0
+ *(.bss.$RESERVED*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _end_uninit_RESERVED = .
+
+.data           0x0000000010000000        0x0 load address 0x000000001a000f0c
+ FILL mask 0xff
+                0x0000000010000000                _data = .
+ *(vtable)
+ *(.ramfunc*)
+ *(.data*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _edata = .
+
+.igot.plt       0x0000000010000000        0x0 load address 0x000000001a000f0c
+ .igot.plt      0x0000000010000000        0x0 build/obj/src/bsp.o
+
+.bss_RAM2       0x0000000010080000        0x0
+                [!provide]                        PROVIDE (__start_bss_RAM2 = .)
+ *(.bss.$RAM2*)
+ *(.bss.$RamLoc40*)
+                0x0000000010080000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                        PROVIDE (__end_bss_RAM2 = .)
+
+.bss_RAM3       0x0000000020000000        0x0
+                [!provide]                        PROVIDE (__start_bss_RAM3 = .)
+ *(.bss.$RAM3*)
+ *(.bss.$RamAHB32*)
+                0x0000000020000000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                        PROVIDE (__end_bss_RAM3 = .)
+
+.bss_RAM4       0x0000000020008000        0x0
+                [!provide]                        PROVIDE (__start_bss_RAM4 = .)
+ *(.bss.$RAM4*)
+ *(.bss.$RamAHB16*)
+                0x0000000020008000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                        PROVIDE (__end_bss_RAM4 = .)
+
+.bss_RAM5       0x000000002000c000        0x0
+                [!provide]                        PROVIDE (__start_bss_RAM5 = .)
+ *(.bss.$RAM5*)
+ *(.bss.$RamAHB_ETB16*)
+                0x000000002000c000                . = ALIGN ((. != 0x0)?0x4:0x1)
+                [!provide]                        PROVIDE (__end_bss_RAM5 = .)
+
+.bss            0x0000000010000000       0xec
+                0x0000000010000000                _bss = .
+ *(.bss*)
+ .bss.board     0x0000000010000000       0x74 build/obj/src/bsp.o
+ .bss.instances.1
+                0x0000000010000074       0x2a build/obj/src/digital.o
+ *fill*         0x000000001000009e        0x2 
+ .bss.instances.0
+                0x00000000100000a0       0x1e build/obj/src/digital.o
+ *fill*         0x00000000100000be        0x2 
+ .bss.instances.0
+                0x00000000100000c0       0x14 build/obj/src/pantalla.o
+ .bss.self.0    0x00000000100000d4       0x18 build/obj/src/reloj_lib.o
+ *(COMMON)
+                0x00000000100000ec                . = ALIGN (0x4)
+                0x00000000100000ec                _ebss = .
+                [!provide]                        PROVIDE (end = .)
+
+.noinit_RAM2    0x0000000010080000        0x0
+ *(.noinit.$RAM2*)
+ *(.noinit.$RamLoc40*)
+                0x0000000010080000                . = ALIGN (0x4)
+
+.noinit_RAM3    0x0000000020000000        0x0
+ *(.noinit.$RAM3*)
+ *(.noinit.$RamAHB32*)
+                0x0000000020000000                . = ALIGN (0x4)
+
+.noinit_RAM4    0x0000000020008000        0x0
+ *(.noinit.$RAM4*)
+ *(.noinit.$RamAHB16*)
+                0x0000000020008000                . = ALIGN (0x4)
+
+.noinit_RAM5    0x000000002000c000        0x0
+ *(.noinit.$RAM5*)
+ *(.noinit.$RamAHB_ETB16*)
+                0x000000002000c000                . = ALIGN (0x4)
+
+.noinit         0x00000000100000ec        0x0
+                0x00000000100000ec                _noinit = .
+ *(.noinit*)
+                0x00000000100000ec                . = ALIGN (0x4)
+                0x00000000100000ec                _end_noinit = .
+                [!provide]                        PROVIDE (_pvHeapStart = DEFINED (__user_heap_base)?__user_heap_base:.)
+                0x0000000010008000                PROVIDE (_vStackTop = DEFINED (__user_stack_top)?__user_stack_top:(__top_RamLoc32 - 0x0))
+                0xffffffff53ff681e                PROVIDE (__valid_user_code_checksum = (0x0 - ((((((_vStackTop + (ResetISR + 0x1)) + (NMI_Handler + 0x1)) + (HardFault_Handler + 0x1)) + (DEFINED (MemManage_Handler)?MemManage_Handler:0x0 + 0x1)) + (DEFINED (BusFault_Handler)?BusFault_Handler:0x0 + 0x1)) + (DEFINED (UsageFault_Handler)?UsageFault_Handler:0x0 + 0x1))))
+OUTPUT(build/bin/bases_ramas_tps.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x0000000000000000       0x2e
+ .ARM.attributes
+                0x0000000000000000       0x1e /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+ .ARM.attributes
+                0x000000000000001e       0x32 build/obj/src/bsp.o
+ .ARM.attributes
+                0x0000000000000050       0x32 build/obj/src/digital.o
+ .ARM.attributes
+                0x0000000000000082       0x32 build/obj/src/main.o
+ .ARM.attributes
+                0x00000000000000b4       0x32 build/obj/src/pantalla.o
+ .ARM.attributes
+                0x00000000000000e6       0x32 build/obj/src/reloj_lib.o
+ .ARM.attributes
+                0x0000000000000118       0x32 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .ARM.attributes
+                0x000000000000014a       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+ .ARM.attributes
+                0x000000000000017c       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x00000000000001ae       0x32 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+
+.comment        0x0000000000000000       0x49
+ .comment       0x0000000000000000       0x49 build/obj/src/bsp.o
+                                         0x4a (size before relaxing)
+ .comment       0x0000000000000049       0x4a build/obj/src/digital.o
+ .comment       0x0000000000000049       0x4a build/obj/src/main.o
+ .comment       0x0000000000000049       0x4a build/obj/src/pantalla.o
+ .comment       0x0000000000000049       0x4a build/obj/src/reloj_lib.o
+ .comment       0x0000000000000049       0x4a build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+
+.debug_info     0x0000000000000000     0x2094
+ .debug_info    0x0000000000000000      0xbca build/obj/src/bsp.o
+ .debug_info    0x0000000000000bca      0x6d8 build/obj/src/digital.o
+ .debug_info    0x00000000000012a2      0x32a build/obj/src/main.o
+ .debug_info    0x00000000000015cc      0x30e build/obj/src/pantalla.o
+ .debug_info    0x00000000000018da      0x4e1 build/obj/src/reloj_lib.o
+ .debug_info    0x0000000000001dbb      0x2d9 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+
+.debug_abbrev   0x0000000000000000      0x88e
+ .debug_abbrev  0x0000000000000000      0x205 build/obj/src/bsp.o
+ .debug_abbrev  0x0000000000000205      0x1fa build/obj/src/digital.o
+ .debug_abbrev  0x00000000000003ff       0xfd build/obj/src/main.o
+ .debug_abbrev  0x00000000000004fc      0x137 build/obj/src/pantalla.o
+ .debug_abbrev  0x0000000000000633      0x130 build/obj/src/reloj_lib.o
+ .debug_abbrev  0x0000000000000763      0x12b build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+
+.debug_aranges  0x0000000000000000      0x268
+ .debug_aranges
+                0x0000000000000000       0x58 build/obj/src/bsp.o
+ .debug_aranges
+                0x0000000000000058       0xa0 build/obj/src/digital.o
+ .debug_aranges
+                0x00000000000000f8       0x28 build/obj/src/main.o
+ .debug_aranges
+                0x0000000000000120       0x38 build/obj/src/pantalla.o
+ .debug_aranges
+                0x0000000000000158       0x90 build/obj/src/reloj_lib.o
+ .debug_aranges
+                0x00000000000001e8       0x80 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+
+.debug_ranges   0x0000000000000000      0x220
+ .debug_ranges  0x0000000000000000       0x48 build/obj/src/bsp.o
+ .debug_ranges  0x0000000000000048       0x90 build/obj/src/digital.o
+ .debug_ranges  0x00000000000000d8       0x18 build/obj/src/main.o
+ .debug_ranges  0x00000000000000f0       0x40 build/obj/src/pantalla.o
+ .debug_ranges  0x0000000000000130       0x80 build/obj/src/reloj_lib.o
+ .debug_ranges  0x00000000000001b0       0x70 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+
+.debug_macro    0x0000000000000000     0x63b1
+ .debug_macro   0x0000000000000000      0x33f build/obj/src/bsp.o
+ .debug_macro   0x000000000000033f      0xaba build/obj/src/bsp.o
+ .debug_macro   0x0000000000000df9       0x10 build/obj/src/bsp.o
+ .debug_macro   0x0000000000000e09       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000000e2b       0x8e build/obj/src/bsp.o
+ .debug_macro   0x0000000000000eb9       0x51 build/obj/src/bsp.o
+ .debug_macro   0x0000000000000f0a      0x103 build/obj/src/bsp.o
+ .debug_macro   0x000000000000100d       0x6a build/obj/src/bsp.o
+ .debug_macro   0x0000000000001077      0x1df build/obj/src/bsp.o
+ .debug_macro   0x0000000000001256       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000001278       0x73 build/obj/src/bsp.o
+ .debug_macro   0x00000000000012eb       0x28 build/obj/src/bsp.o
+ .debug_macro   0x0000000000001313       0x1c build/obj/src/bsp.o
+ .debug_macro   0x000000000000132f       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000001351       0xfb build/obj/src/bsp.o
+ .debug_macro   0x000000000000144c     0x1011 build/obj/src/bsp.o
+ .debug_macro   0x000000000000245d      0x11f build/obj/src/bsp.o
+ .debug_macro   0x000000000000257c      0x2c3 build/obj/src/bsp.o
+ .debug_macro   0x000000000000283f      0x112 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002951       0x11 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002962       0x2a build/obj/src/bsp.o
+ .debug_macro   0x000000000000298c       0x16 build/obj/src/bsp.o
+ .debug_macro   0x00000000000029a2      0x2e6 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002c88       0x82 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002d0a      0x13d build/obj/src/bsp.o
+ .debug_macro   0x0000000000002e47      0x198 build/obj/src/bsp.o
+ .debug_macro   0x0000000000002fdf       0x34 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003013       0x58 build/obj/src/bsp.o
+ .debug_macro   0x000000000000306b      0x236 build/obj/src/bsp.o
+ .debug_macro   0x00000000000032a1      0x572 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003813       0x16 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003829      0x18a build/obj/src/bsp.o
+ .debug_macro   0x00000000000039b3       0x88 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003a3b      0x1b9 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003bf4      0x1da build/obj/src/bsp.o
+ .debug_macro   0x0000000000003dce       0x40 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e0e       0x1c build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e2a       0x2e build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e58       0x2e build/obj/src/bsp.o
+ .debug_macro   0x0000000000003e86       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000003ea8      0x201 build/obj/src/bsp.o
+ .debug_macro   0x00000000000040a9       0xe0 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004189      0x34c build/obj/src/bsp.o
+ .debug_macro   0x00000000000044d5       0xdc build/obj/src/bsp.o
+ .debug_macro   0x00000000000045b1       0xc4 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004675       0x8f build/obj/src/bsp.o
+ .debug_macro   0x0000000000004704       0x94 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004798       0xb8 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004850       0x4c build/obj/src/bsp.o
+ .debug_macro   0x000000000000489c       0x16 build/obj/src/bsp.o
+ .debug_macro   0x00000000000048b2      0x328 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004bda       0x3a build/obj/src/bsp.o
+ .debug_macro   0x0000000000004c14       0xd0 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004ce4       0x18 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004cfc       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004d1e       0x40 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004d5e       0x3a build/obj/src/bsp.o
+ .debug_macro   0x0000000000004d98       0x22 build/obj/src/bsp.o
+ .debug_macro   0x0000000000004dba      0x475 build/obj/src/bsp.o
+ .debug_macro   0x000000000000522f      0x329 build/obj/src/digital.o
+ .debug_macro   0x0000000000005558      0x355 build/obj/src/main.o
+ .debug_macro   0x00000000000058ad       0x10 build/obj/src/main.o
+ .debug_macro   0x00000000000058bd       0x16 build/obj/src/main.o
+ .debug_macro   0x00000000000058d3      0x131 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005a04       0x64 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005a68       0x1e build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005a86       0x35 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005abb       0x34 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005aef      0x174 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005c63       0x16 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005c79       0x43 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005cbc       0x34 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005cf0       0x10 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005d00       0x58 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005d58      0x182 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000005eda      0x341 build/obj/src/pantalla.o
+ .debug_macro   0x000000000000621b       0x10 build/obj/src/pantalla.o
+ .debug_macro   0x000000000000622b       0x35 build/obj/src/pantalla.o
+ .debug_macro   0x0000000000006260      0x134 build/obj/src/reloj_lib.o
+ .debug_macro   0x0000000000006394       0x1d build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+
+.debug_line     0x0000000000000000     0x2c07
+ .debug_line    0x0000000000000000      0xa87 build/obj/src/bsp.o
+ .debug_line    0x0000000000000a87      0xb4c build/obj/src/digital.o
+ .debug_line    0x00000000000015d3      0x967 build/obj/src/main.o
+ .debug_line    0x0000000000001f3a      0x42a build/obj/src/pantalla.o
+ .debug_line    0x0000000000002364      0x68b build/obj/src/reloj_lib.o
+ .debug_line    0x00000000000029ef      0x218 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+
+.debug_str      0x0000000000000000    0x1b66b
+ .debug_str     0x0000000000000000    0x18415 build/obj/src/bsp.o
+                                      0x185fe (size before relaxing)
+ .debug_str     0x0000000000018415      0x1fc build/obj/src/digital.o
+                                      0x16d5f (size before relaxing)
+ .debug_str     0x0000000000018611       0xa6 build/obj/src/main.o
+                                      0x17a90 (size before relaxing)
+ .debug_str     0x00000000000186b7     0x2bbd build/obj/src/pantalla.o
+                                       0x69f0 (size before relaxing)
+ .debug_str     0x000000000001b274      0x1c9 build/obj/src/reloj_lib.o
+                                       0x6a2d (size before relaxing)
+ .debug_str     0x000000000001b43d      0x22e build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                                       0x2fa6 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x8f0
+ .debug_frame   0x0000000000000000      0x13c build/obj/src/bsp.o
+ .debug_frame   0x000000000000013c      0x294 build/obj/src/digital.o
+ .debug_frame   0x00000000000003d0       0x58 build/obj/src/main.o
+ .debug_frame   0x0000000000000428       0x9c build/obj/src/pantalla.o
+ .debug_frame   0x00000000000004c4      0x24c build/obj/src/reloj_lib.o
+ .debug_frame   0x0000000000000710      0x170 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ .debug_frame   0x0000000000000880       0x28 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+ .debug_frame   0x00000000000008a8       0x28 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00000000000008d0       0x20 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+
+Cross Reference Table
+
+Symbol                                            File
+ADC0_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ADC1_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ATIMER_IRQHandler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ActualizarHora                                    build/obj/src/reloj_lib.o
+                                                  build/obj/src/main.o
+AlarmaActivar                                     build/obj/src/reloj_lib.o
+AumentarPulsos                                    build/obj/src/reloj_lib.o
+BoardCreate                                       build/obj/src/bsp.o
+                                                  build/obj/src/main.o
+BusFault_Handler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+CAN0_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+CAN1_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+Cada_Segundo                                      build/obj/src/reloj_lib.o
+ConfigurarHora                                    build/obj/src/reloj_lib.o
+ConfigurarPulsos                                  build/obj/src/reloj_lib.o
+ConsultarHoraAlarma                               build/obj/src/reloj_lib.o
+CrearReloj                                        build/obj/src/reloj_lib.o
+                                                  build/obj/src/main.o
+DAC_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+DMA_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+DarHora                                           build/obj/src/reloj_lib.o
+                                                  build/obj/src/main.o
+DebugMon_Handler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+DigitTurnOn                                       build/obj/src/bsp.o
+DigitalInputCreate                                build/obj/src/digital.o
+                                                  build/obj/src/bsp.o
+DigitalInputState                                 build/obj/src/digital.o
+DigitalInputhasActivated                          build/obj/src/digital.o
+DigitalInputhasChanged                            build/obj/src/digital.o
+DigitalInputhasDesactivated                       build/obj/src/digital.o
+DigitalOutPutActivate                             build/obj/src/digital.o
+DigitalOutPutDesactivate                          build/obj/src/digital.o
+DigitalOutPutToggle                               build/obj/src/digital.o
+DigitalOutputAllocate                             build/obj/src/digital.o
+Digital_OutputCreate                              build/obj/src/digital.o
+                                                  build/obj/src/bsp.o
+DigitalinputAllocate                              build/obj/src/digital.o
+DisplayCreate                                     build/obj/src/pantalla.o
+                                                  build/obj/src/bsp.o
+DisplayRefresh                                    build/obj/src/pantalla.o
+                                                  build/obj/src/main.o
+DisplayWriteBCD                                   build/obj/src/pantalla.o
+                                                  build/obj/src/main.o
+ETH_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+EVRT_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+EstadoActualAlarma                                build/obj/src/reloj_lib.o
+FLASH_EEPROM_IRQHandler                           build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+FijarAlarma                                       build/obj/src/reloj_lib.o
+GINT0_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GINT1_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO0_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO1_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO2_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO3_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO4_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO5_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO6_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GPIO7_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+GestionAlarma                                     build/obj/src/reloj_lib.o
+HardFault_Handler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+I2C0_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+I2C1_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+I2S0_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+I2S1_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+IntDefaultHandler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+LCD_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+M0CORE_IRQHandler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+M0SUB_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+MCPWM_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+MemManage_Handler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+NMI_Handler                                       build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+PendSV_Handler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+PosponerAlarma                                    build/obj/src/reloj_lib.o
+PosponerAlarmaDia                                 build/obj/src/reloj_lib.o
+QEI_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+RIT_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+RTC_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ResetISR                                          build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SCT_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SDIO_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SGPIO_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SPIFI_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SPI_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SSP0_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SSP1_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+SVC_Handler                                       build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+ScreenTurnOff                                     build/obj/src/bsp.o
+SegmentsTurnOn                                    build/obj/src/bsp.o
+SysTick_Handler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+TIMER0_IRQHandler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+TIMER1_IRQHandler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+TIMER2_IRQHandler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+TIMER3_IRQHandler                                 build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+UART0_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+UART1_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+UART2_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+UART3_IRQHandler                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+USB0_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+USB1_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+UsageFault_Handler                                build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+VADC_IRQHandler                                   build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+WDT_IRQHandler                                    build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+__bss_end__                                       /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+__bss_section_table_end                           build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+__bss_start__                                     /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+__call_exitprocs                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+__data_section_table                              build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+__data_section_table_end                          build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+__deregister_frame_info                           /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+__dso_handle                                      /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+__init_array_end                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+__init_array_start                                /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+__libc_fini_array                                 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+__libc_init_array                                 /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+                                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+__preinit_array_end                               /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+__preinit_array_start                             /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+__register_frame_info                             /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crtbegin.o
+__sf_fake_stderr                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+__sf_fake_stdin                                   /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+__sf_fake_stdout                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+__stack                                           /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+__valid_user_code_checksum                        build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+_exit                                             /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libnosys.a(_exit.o)
+                                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+_fini                                             /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+_global_impure_ptr                                /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+                                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+_impure_ptr                                       /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-impure.o)
+_init                                             /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/softfp/crti.o
+                                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-init.o)
+_mainCRTStartup                                   /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+_stack_init                                       /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+_start                                            /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+_vStackTop                                        build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+atexit                                            /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+bss_init                                          build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+data_init                                         build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+delay                                             build/obj/src/main.o
+exit                                              /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-exit.o)
+                                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+g_pfnVectors                                      build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+hardware_init_hook                                /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+main                                              build/obj/src/main.o
+                                                  build/obj/external/base/soc/lpc43xx/startup/cr_startup_lpc43xx.o
+                                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+memcmp                                            /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcmp.o)
+                                                  build/obj/src/reloj_lib.o
+memcpy                                            /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memcpy-stub.o)
+                                                  build/obj/src/reloj_lib.o
+                                                  build/obj/src/pantalla.o
+memset                                            /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/libc_nano.a(lib_a-memset.o)
+                                                  build/obj/src/reloj_lib.o
+                                                  build/obj/src/pantalla.o
+                                                  /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+software_init_hook                                /usr/local/share/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/softfp/crt0.o
+validar_hora                                      build/obj/src/reloj_lib.o

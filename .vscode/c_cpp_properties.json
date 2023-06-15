@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/muju/external/base/soc/lpc43xx/lpc_open/inc",
+                "${workspaceFolder}/muju/external/base/soc/lpc43xx/lpc_open/inc/config_43xx",
+                "${workspaceFolder}/inc"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
