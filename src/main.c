@@ -55,9 +55,11 @@
 /* === Private variable declarations =========================================================== */
 
 /* === Private function declarations =========================================================== */
-void delay(void);
-/* === Public variable definitions ============================================================= */
 
+/* === Public variable definitions ============================================================= */
+const struct board_s* board;
+struct reloj_s* reloj;
+uint8_t hora[6];
 /* === Private variable definitions ============================================================ */
 
 /* === Private function implementation ========================================================= */
@@ -67,42 +69,29 @@ void delay(void);
 int main(void) {
 
     SysTick_Init(1000);
-    board_t board = BoardCreate();
-    reloj_t reloj=CrearReloj(10);
-    uint8_t hora[6];
+    board = BoardCreate();
+    reloj=CrearReloj(1000);
 
-    uint8_t hora_inicial[6]={0,2,2,4,0,0};
+    uint8_t hora_inicial[6]={1,9,2,8,0,0};
     ConfigurarHora(reloj,hora_inicial,6);
     DarHora(reloj,hora,6);
-
+    DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
     
     
     while (true) {
-    DisplayRefresh(board->display);
-    
-    if(DigitalInputState(board->Cancelar)) ConfigurarHora(reloj,hora_inicial,6);
-    
-    delay();
-    DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
-    ActualizarHora(reloj);
-    DarHora(reloj,hora,6);
+
+
         
     }
 }
 
-void delay(){
-    for(int i=0;i<1000;i++) {
-
-        for(int o=0;o<1;o++){
-            __asm("NOP");
-        }
-    }
-}
 
 
 void SysTick_Handler(void){
-    //DisplayRefresh(board->display);
-    __asm ("NOP");
+    DisplayRefresh(board->display);
+    ActualizarHora(reloj);
+    DarHora(reloj, hora, 6);
+    DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
 }
 
 
