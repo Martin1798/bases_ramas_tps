@@ -66,17 +66,21 @@ void delay(void);
 
 int main(void) {
 
-    //SysTick_Init(1);
+    SysTick_Init(1000);
     board_t board = BoardCreate();
-    reloj_t reloj=CrearReloj(1);
-
+    reloj_t reloj=CrearReloj(10);
     uint8_t hora[6];
 
+    uint8_t hora_inicial[6]={0,2,2,4,0,0};
+    ConfigurarHora(reloj,hora_inicial,6);
+    DarHora(reloj,hora,6);
 
-    DisplayWriteBCD(board->display,(uint8_t[]){0,0,0,0},4);
+    
     
     while (true) {
     DisplayRefresh(board->display);
+    
+    if(DigitalInputState(board->Cancelar)) ConfigurarHora(reloj,hora_inicial,6);
     
     delay();
     DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
@@ -96,10 +100,10 @@ void delay(){
 }
 
 
-/*void SysTick_Handler(void){
+void SysTick_Handler(void){
     //DisplayRefresh(board->display);
     __asm ("NOP");
-}*/
+}
 
 
 

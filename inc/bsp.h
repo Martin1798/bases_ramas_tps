@@ -40,3 +40,5 @@ typedef struct board_s{
 /// @return 
 board_t BoardCreate(void);
 
+void SysTick_Init(uint16_t ticks);
+

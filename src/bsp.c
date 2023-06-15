@@ -143,10 +143,10 @@ board_t BoardCreate(void){
     }
 
 
-    /*void SysTick_Init(uint16_t ticks){
+    void SysTick_Init(uint16_t ticks){
         __asm volatile ("cpsid i");
         SystemCoreClockUpdate();
         SysTick_Config(SystemCoreClock/ticks);
         //NVIC_SetPriotity(SysTick_IRQn,(1<<__NVIC_PRIO_BITS)-1);
         __asm volatile ("cpsie i");
-    }*/
+    }
