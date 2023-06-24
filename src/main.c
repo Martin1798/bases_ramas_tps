@@ -45,6 +45,7 @@
 #include "poncho.h"
 #include "bsp.h"
 #include "reloj_lib.h"
+#include "definiciones.h"
 #include <stdbool.h>
 
 
@@ -55,11 +56,11 @@
 /* === Private variable declarations =========================================================== */
 
 /* === Private function declarations =========================================================== */
-
 /* === Public variable definitions ============================================================= */
 const struct board_s* board;
 struct reloj_s* reloj;
 uint8_t hora[6];
+uint8_t estado=0;
 /* === Private variable definitions ============================================================ */
 
 /* === Private function implementation ========================================================= */
@@ -70,12 +71,9 @@ int main(void) {
 
     SysTick_Init(1000);
     board = BoardCreate();
-    reloj=CrearReloj(10);
+    reloj=CrearReloj(1000);
 
-    uint8_t hora_inicial[6]={0,0,0,0,0,0};
-    ConfigurarHora(reloj,hora_inicial,6);
-    DarHora(reloj,hora,6);
-    DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
+
     
     
     while (true) {
@@ -89,11 +87,166 @@ int main(void) {
 
 
 void SysTick_Handler(void){
-    DisplayRefresh(board->display);
+
+    static unsigned int tiempo=0;
+    static unsigned int temporizador=0;
+    static unsigned int delay;
+    static signed int variable_general=0;
+    bool botonF4_presionado=false;
+    bool botonF3_presionado=false;
+    bool botonAceptar_presionado=false;
+    
+
+    switch (estado)
+    {
+    case inicio:
+        variable_general=0;
+        DarHora(reloj, hora, 6);
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_OFF);
+
+        if(DigitalInputState(board->F1)) tiempo++;
+        else tiempo=0;
+        if(tiempo>=3000) {
+            estado++;
+            tiempo=0;
+        }
+
+        break;
+
+    case ajuste_minutos:
+        temporizador++;
+        if(temporizador<1000){
+        DisplayWriteBCD(board->display,(uint8_t[]){SEG_OFF,SEG_OFF,hora[1],hora[0]},4,PUNTOS_OFF);  
+        }
+        else{
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_OFF);
+        }
+        if (temporizador>=2000) temporizador=0;
+
+
+        if(DigitalInputState(board->F4))botonF4_presionado=true;
+        if(botonF4_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF4_presionado=false;
+                variable_general++;
+            }
+        }
+
+        if(DigitalInputState(board->F3))botonF3_presionado=true;
+        if(botonF3_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF3_presionado=false;
+                variable_general--;   
+            }
+        }
+        if(variable_general<0)variable_general=59;
+        if(variable_general>59) variable_general=0;
+        hora[3]=variable_general%10;
+        hora[2]=(variable_general-hora[3])/10;
+
+        if(DigitalInputState(board->Aceptar)){
+            variable_general=0;
+            delay=0;
+            estado++;
+        }
+        if(
+            DigitalInputState(board->Aceptar)||
+            DigitalInputState(board->F1)||
+            DigitalInputState(board->F2)||
+            DigitalInputState(board->F3)||
+            DigitalInputState(board->F4)
+            ) tiempo=0;
+
+        tiempo++;
+        if (tiempo>30000) {
+            estado=0;
+            tiempo=0;
+        }
+        if(DigitalInputState(board->Cancelar)) estado=0;
+
+
+    break;
+
+    case ajuste_horas:
+        temporizador++;
+        if(temporizador<1000){
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_OFF);  
+        }
+        else{
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],SEG_OFF,SEG_OFF},4,PUNTOS_OFF);
+        }
+        if (temporizador>=2000) temporizador=0;
+
+
+        if(DigitalInputState(board->F4))botonF4_presionado=true;
+        if(botonF4_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF4_presionado=false;
+                variable_general++;
+            }
+        }
+
+        if(DigitalInputState(board->F3))botonF3_presionado=true;
+        if(botonF3_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF3_presionado=false;
+                variable_general--;   
+            }
+        }
+        if(variable_general<0)variable_general=23;
+        if(variable_general>23) variable_general=0;
+        hora[1]=variable_general%10;
+        hora[0]=(variable_general-hora[1])/10;
+
+        if(
+            DigitalInputState(board->Aceptar)||
+            DigitalInputState(board->F1)||
+            DigitalInputState(board->F2)||
+            DigitalInputState(board->F3)||
+            DigitalInputState(board->F4)
+            ) tiempo=0;
+
+        tiempo++;
+        if (tiempo>30000) {
+            estado=0;
+            tiempo=0;
+        }
+        if(DigitalInputState(board->Cancelar)) estado=0;
+
+
+        if(DigitalInputState(board->Aceptar))botonAceptar_presionado=true;
+        if(botonAceptar_presionado){
+            delay++;
+            if(delay>=300){
+                delay=0;
+                botonAceptar_presionado=false;
+                if(DigitalInputState(board->Aceptar)){
+                     ConfigurarHora(reloj,hora,4);
+                     estado=0;                
+                }
+            }
+        }
+
+
+    break;
+
+    default:
+        break;
+    }
+
     ActualizarHora(reloj);
-    DarHora(reloj, hora, 6);
-    DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
+    DisplayRefresh(board->display);
+
 }
+
 
 
 

@@ -39,7 +39,7 @@ display_t DisplayCreate(uint8_t digits,display_driver_t driver);
 /// @param number Puntero al array donde se encuentran los numeros a cargar
 /// @param size Numero de digitos del display
 
-void DisplayWriteBCD(display_t display,uint8_t *number,uint8_t size);
+void DisplayWriteBCD(display_t display,uint8_t *number,uint8_t size,uint8_t punto);
 /// @brief Con esta funcion se hace el barrido de la pantalla 
 /// @param display Determina el display en el cual se tendra que multiplexar
 

@@ -23,6 +23,7 @@ static const uint8_t IMAGES[]={
     SEGMENT_A | SEGMENT_B | SEGMENT_C | SEGMENT_F,
     SEGMENT_A | SEGMENT_B | SEGMENT_C | SEGMENT_D | SEGMENT_E | SEGMENT_F |SEGMENT_G,
     SEGMENT_A | SEGMENT_B | SEGMENT_C | SEGMENT_F | SEGMENT_G,
+    0,
 };
 
 
@@ -47,11 +48,12 @@ display_t DisplayCreate(uint8_t digits, display_driver_t driver){
     return display;
 }
 
-void DisplayWriteBCD(display_t display,uint8_t *number,uint8_t size){
+void DisplayWriteBCD(display_t display,uint8_t *number,uint8_t size,uint8_t punto){
     memset(display->memory,0,sizeof(display->memory));
     for(int index=0; index<size; index++){
         if(index>=display->digits) break;
         display->memory[index]=IMAGES[number[index]];
+        if(index==punto) display->memory[index]|=128;
         
     }
 }
