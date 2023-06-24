@@ -1,8 +1,8 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define numero_entradas 6
-#define numero_salidas  14
+#define numero_entradas 30
+#define numero_salidas  30
 
 
 #ifndef invertir_logica

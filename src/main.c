@@ -70,9 +70,9 @@ int main(void) {
 
     SysTick_Init(1000);
     board = BoardCreate();
-    reloj=CrearReloj(1000);
+    reloj=CrearReloj(10);
 
-    uint8_t hora_inicial[6]={1,9,2,8,0,0};
+    uint8_t hora_inicial[6]={0,0,0,0,0,0};
     ConfigurarHora(reloj,hora_inicial,6);
     DarHora(reloj,hora,6);
     DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4);
@@ -80,6 +80,7 @@ int main(void) {
     
     while (true) {
 
+        
 
         
     }
