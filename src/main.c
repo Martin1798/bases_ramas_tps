@@ -73,7 +73,7 @@ int main(void) {
     board = BoardCreate();
     reloj=CrearReloj(1000);
 
-
+    
     
     
     while (true) {
@@ -241,7 +241,8 @@ void SysTick_Handler(void){
                 botonAceptar_presionado=false;
                 if(DigitalInputState(board->Aceptar)){
                      ConfigurarHora(reloj,hora,4);
-                     estado=mostrar_hora;                
+                     estado=mostrar_hora;  
+                     GestionAlarma(reloj,false);              
                 }
             }
         }
@@ -254,9 +255,13 @@ void SysTick_Handler(void){
         variable_general=0;
         DarHora(reloj, hora, 6);
 
-         temporizador++;
+        temporizador++;
+
+        if(EstadoActualAlarma(reloj))variable_general=5;
+        else variable_general=2;
+
         if(temporizador<1000){
-        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,2);  
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,variable_general);  
         }
         else{
         DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_OFF);
@@ -278,6 +283,23 @@ void SysTick_Handler(void){
             variable_general=hora[2]*10+hora[3];
             tiempo1=0;
         }
+
+        if(AlarmaActivar(reloj)){
+            DigitalOutPutActivate(board->led_amarillo);
+
+            if(DigitalInputState(board->Cancelar)){
+                DigitalOutPutDesactivate(board->led_amarillo);
+                PosponerAlarmaDia(reloj);
+            } 
+        }
+
+        if(DigitalInputState(board->Aceptar)){
+            GestionAlarma(reloj,true);
+        }
+
+        if(DigitalInputState(board->Cancelar)){
+            GestionAlarma(reloj,false);
+        }       
 
     break;
 
