@@ -258,7 +258,9 @@ void SysTick_Handler(void){
         temporizador++;
 
         if(EstadoActualAlarma(reloj))variable_general=5;
-        else variable_general=2;
+        else {variable_general=2;
+            PosponerAlarmaDia(reloj);
+        }
 
         if(temporizador<1000){
         DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,variable_general);  
@@ -290,13 +292,18 @@ void SysTick_Handler(void){
             if(DigitalInputState(board->Cancelar)){
                 DigitalOutPutDesactivate(board->led_amarillo);
                 PosponerAlarmaDia(reloj);
+                while(DigitalInputState(board->Cancelar));
+            } 
+            if(DigitalInputState(board->Aceptar)){
+                DigitalOutPutDesactivate(board->led_amarillo);
+                PosponerAlarma(reloj,10);
             } 
         }
 
         if(DigitalInputState(board->Aceptar)){
             GestionAlarma(reloj,true);
         }
-
+        
         if(DigitalInputState(board->Cancelar)){
             GestionAlarma(reloj,false);
         }       
