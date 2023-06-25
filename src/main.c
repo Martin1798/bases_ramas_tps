@@ -59,7 +59,7 @@
 /* === Public variable definitions ============================================================= */
 const struct board_s* board;
 struct reloj_s* reloj;
-uint8_t hora[6];
+uint8_t hora[6],alarma[6];
 uint8_t estado=0;
 /* === Private variable definitions ============================================================ */
 
@@ -88,9 +88,10 @@ int main(void) {
 
 void SysTick_Handler(void){
 
-    static unsigned int tiempo=0;
+    static unsigned int tiempo=0,tiempo1=0;
     static unsigned int temporizador=0;
     static unsigned int delay;
+    static unsigned int caso=0;
     static signed int variable_general=0;
     bool botonF4_presionado=false;
     bool botonF3_presionado=false;
@@ -99,6 +100,7 @@ void SysTick_Handler(void){
 
     switch (estado)
     {
+
     case inicio:
         variable_general=0;
         DarHora(reloj, hora, 6);
@@ -107,8 +109,17 @@ void SysTick_Handler(void){
         if(DigitalInputState(board->F1)) tiempo++;
         else tiempo=0;
         if(tiempo>=3000) {
-            estado++;
+            estado=ajuste_minutos;
             tiempo=0;
+        }
+
+        if(DigitalInputState(board->F2)) tiempo1++;
+        else tiempo1=0;
+        if(tiempo1>=3000) {
+            estado=configurar_alarma_minutos;
+            ConsultarHoraAlarma(reloj,hora,6);
+            variable_general=hora[2]*10+hora[3];
+            tiempo1=0;
         }
 
         break;
@@ -151,7 +162,7 @@ void SysTick_Handler(void){
         if(DigitalInputState(board->Aceptar)){
             variable_general=0;
             delay=0;
-            estado++;
+            estado=ajuste_horas;
         }
         if(
             DigitalInputState(board->Aceptar)||
@@ -163,10 +174,10 @@ void SysTick_Handler(void){
 
         tiempo++;
         if (tiempo>30000) {
-            estado=0;
+            estado=caso;
             tiempo=0;
         }
-        if(DigitalInputState(board->Cancelar)) estado=0;
+        if(DigitalInputState(board->Cancelar)) estado=caso;
 
 
     break;
@@ -216,10 +227,10 @@ void SysTick_Handler(void){
 
         tiempo++;
         if (tiempo>30000) {
-            estado=0;
+            estado=caso;
             tiempo=0;
         }
-        if(DigitalInputState(board->Cancelar)) estado=0;
+        if(DigitalInputState(board->Cancelar)) estado=caso;
 
 
         if(DigitalInputState(board->Aceptar))botonAceptar_presionado=true;
@@ -230,13 +241,171 @@ void SysTick_Handler(void){
                 botonAceptar_presionado=false;
                 if(DigitalInputState(board->Aceptar)){
                      ConfigurarHora(reloj,hora,4);
-                     estado=0;                
+                     estado=mostrar_hora;                
                 }
             }
         }
 
+    break;
+
+
+    case mostrar_hora:
+        caso=mostrar_hora;
+        variable_general=0;
+        DarHora(reloj, hora, 6);
+
+         temporizador++;
+        if(temporizador<1000){
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,2);  
+        }
+        else{
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_OFF);
+        }
+        if (temporizador>=2000) temporizador=0;
+
+        if(DigitalInputState(board->F1)) tiempo++;
+        else tiempo=0;
+        if(tiempo>=3000) {
+            estado=ajuste_minutos;
+            tiempo=0;
+        }
+
+        if(DigitalInputState(board->F2)) tiempo1++;
+        else tiempo1=0;
+        if(tiempo1>=3000) {
+            estado=configurar_alarma_minutos;
+            ConsultarHoraAlarma(reloj,hora,6);
+            variable_general=hora[2]*10+hora[3];
+            tiempo1=0;
+        }
 
     break;
+
+    case configurar_alarma_minutos:
+
+        temporizador++;
+        if(temporizador<1000){
+        DisplayWriteBCD(board->display,(uint8_t[]){SEG_OFF,SEG_OFF,hora[1],hora[0]},4,PUNTOS_ON);  
+        }
+        else{
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_ON);
+        }
+        if (temporizador>=2000) temporizador=0;
+
+
+        if(DigitalInputState(board->F4))botonF4_presionado=true;
+        if(botonF4_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF4_presionado=false;
+                variable_general++;
+            }
+        }
+
+        if(DigitalInputState(board->F3))botonF3_presionado=true;
+        if(botonF3_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF3_presionado=false;
+                variable_general--;   
+            }
+        }
+        if(variable_general<0)variable_general=59;
+        if(variable_general>59) variable_general=0;
+        hora[3]=variable_general%10;
+        hora[2]=(variable_general-hora[3])/10;
+
+        if(DigitalInputState(board->Aceptar)){
+            variable_general=0;
+            delay=0;
+            estado=configurar_alarma_horas;
+            variable_general=hora[0]*10+hora[1];
+        }
+        if(
+            DigitalInputState(board->Aceptar)||
+            DigitalInputState(board->F1)||
+            DigitalInputState(board->F2)||
+            DigitalInputState(board->F3)||
+            DigitalInputState(board->F4)
+            ) tiempo=0;
+
+        tiempo++;
+        if (tiempo>30000) {
+            estado=caso;
+            tiempo=0;
+        }
+        if(DigitalInputState(board->Cancelar)) estado=caso;
+
+    break;
+
+    case configurar_alarma_horas:
+        temporizador++;
+        if(temporizador<1000){
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_ON);  
+        }
+        else{
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],SEG_OFF,SEG_OFF},4,PUNTOS_ON);
+        }
+        if (temporizador>=2000) temporizador=0;
+
+
+        if(DigitalInputState(board->F4))botonF4_presionado=true;
+        if(botonF4_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF4_presionado=false;
+                variable_general++;
+            }
+        }
+
+        if(DigitalInputState(board->F3))botonF3_presionado=true;
+        if(botonF3_presionado){
+            delay++;
+            if(delay>=150){
+                delay=0;
+                botonF3_presionado=false;
+                variable_general--;   
+            }
+        }
+        if(variable_general<0)variable_general=23;
+        if(variable_general>23) variable_general=0;
+        hora[1]=variable_general%10;
+        hora[0]=(variable_general-hora[1])/10;
+
+        if(
+            DigitalInputState(board->Aceptar)||
+            DigitalInputState(board->F1)||
+            DigitalInputState(board->F2)||
+            DigitalInputState(board->F3)||
+            DigitalInputState(board->F4)
+            ) tiempo=0;
+
+        tiempo++;
+        if (tiempo>30000) {
+            estado=caso;
+            tiempo=0;
+        }
+        if(DigitalInputState(board->Cancelar)) estado=caso;
+
+
+        if(DigitalInputState(board->Aceptar))botonAceptar_presionado=true;
+        if(botonAceptar_presionado){
+            delay++;
+            if(delay>=300){
+                delay=0;
+                botonAceptar_presionado=false;
+                if(DigitalInputState(board->Aceptar)){
+                     FijarAlarma(reloj,hora,6);
+                     estado=caso;                
+                }
+            }
+        }
+
+    break;
+
 
     default:
         break;
