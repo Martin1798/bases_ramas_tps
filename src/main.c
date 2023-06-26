@@ -79,7 +79,7 @@ int main(void) {
     while (true) {
 
         
-
+        //Consideracion: quiero que la alarma por defecto este activada, este configurada o no
         
     }
 }
@@ -96,6 +96,7 @@ void SysTick_Handler(void){
     bool botonF4_presionado=false;
     bool botonF3_presionado=false;
     bool botonAceptar_presionado=false;
+    bool botonCancelar_presionado=false;
     
 
     switch (estado)
@@ -275,6 +276,7 @@ void SysTick_Handler(void){
         if(tiempo>=3000) {
             estado=ajuste_minutos;
             tiempo=0;
+            variable_general=0;
         }
 
         if(DigitalInputState(board->F2)) tiempo1++;
@@ -292,7 +294,7 @@ void SysTick_Handler(void){
             if(DigitalInputState(board->Cancelar)){
                 DigitalOutPutDesactivate(board->led_amarillo);
                 PosponerAlarmaDia(reloj);
-                while(DigitalInputState(board->Cancelar));
+                while(DigitalInputState(board->Cancelar))__asm("NOP");
             } 
             if(DigitalInputState(board->Aceptar)){
                 DigitalOutPutDesactivate(board->led_amarillo);
@@ -303,10 +305,19 @@ void SysTick_Handler(void){
         if(DigitalInputState(board->Aceptar)){
             GestionAlarma(reloj,true);
         }
-        
-        if(DigitalInputState(board->Cancelar)){
-            GestionAlarma(reloj,false);
-        }       
+
+        if(DigitalInputState(board->Cancelar))botonCancelar_presionado=true;
+            if(botonCancelar_presionado){
+                delay++;
+                if(delay>=300){
+                    delay=0;
+                    botonCancelar_presionado=false;
+                    if(DigitalInputState(board->Cancelar)){
+                        GestionAlarma(reloj,false);              
+                    }
+            }
+        }
+     
 
     break;
 
