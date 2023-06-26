@@ -176,6 +176,8 @@ void SysTick_Handler(void){
             variable_general=0;
             delay=0;
             estado=ajuste_horas;
+            DarHora(reloj,alarma,6);
+            variable_general=alarma[0]*10+alarma[1];
         }
         if(
             DigitalInputState(board->Aceptar)||
@@ -288,7 +290,8 @@ void SysTick_Handler(void){
         if(tiempo>=3000) {
             estado=ajuste_minutos;
             tiempo=0;
-            variable_general=0;
+            DarHora(reloj,hora,6);
+            variable_general=hora[2]*10+hora[3];
         }
 
         if(DigitalInputState(board->F2)) tiempo1++;
