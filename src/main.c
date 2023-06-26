@@ -105,7 +105,19 @@ void SysTick_Handler(void){
     case inicio:
         variable_general=0;
         DarHora(reloj, hora, 6);
-        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_OFF);
+        //DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,PUNTOS_OFF);
+
+        temporizador++;
+
+
+        if(temporizador<1000){
+        DisplayWriteBCD(board->display,(uint8_t[]){hora[3],hora[2],hora[1],hora[0]},4,2); 
+        }
+        else{
+        DisplayWriteBCD(board->display,(uint8_t[]){SEG_OFF,SEG_OFF,SEG_OFF,SEG_OFF},4,PUNTOS_OFF);
+        }
+        if (temporizador>=2000) temporizador=0;
+
 
         if(DigitalInputState(board->F1)) tiempo++;
         else tiempo=0;

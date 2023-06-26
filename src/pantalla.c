@@ -55,7 +55,7 @@ void DisplayWriteBCD(display_t display,uint8_t *number,uint8_t size,uint8_t punt
         display->memory[index]=IMAGES[number[index]];
         if(index==punto) display->memory[index]|=128;
         if(punto==50)   display->memory[index]|=128;
-        if(punto==5)    {display->memory[2]|=128;display->memory[3]|=128;}
+        if(punto==5)    {display->memory[2]|=128;display->memory[0]|=128;}
         
     }
 }
